@@ -61,7 +61,6 @@
                                 <li class="nav-item"><a class="nav-link" href="shop/male/sportShoe/SportShoe.jsp">Giày thể thao</a></li>
                                 <li class="nav-item"><a class="nav-link" href="shop/male/runningShoes/Runn1.jsp">Giày chạy bộ</a></li>
                                 <li class="nav-item"><a class="nav-link" href="shop/male/soccerShoes/Socc1.jsp">Giày đá banh</a></li>
-                                <li class="nav-item"><a class="nav-link" href="admin/Theme/index.jsp">Giày đá banh</a></li>
                             </ul>
                         </li>
                         <li class="nav-item submenu dropdown ">
