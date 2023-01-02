@@ -1,3 +1,5 @@
+<%@ page import="project.model.Product" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 
 <!-- meta character set -->
@@ -290,15 +292,17 @@
                 </div>
             </div>
             <div class="row">
+                <% List<Product> list = (List<Product>) request.getAttribute("list");
+                    for (Product p : list) { %>
                 <!-- single product -->
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product">
-                        <img class="img-fluid" src="img/product/p1.jpg" alt="">
+                        <img class="img-fluid" src="<%= p.getImg() %>" alt="">
                         <div class="product-details">
-                            <h6>M1</h6>
+                            <h6><%= p.getName() %></h6>
                             <div class="price">
-                                <h6>189.000đ</h6>
-                                <h6 class="l-through">210.000đ</h6>
+                                <h6><%= p.getPrice() %> VND</h6>
+<%--                                <h6 class="l-through">210.000đ</h6>--%>
                             </div>
                             <div class="prd-bottom">
 
@@ -320,212 +324,9 @@
                         </div>
                     </div>
                 </div>
+                <% } %>
                 <!-- single product -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <img class="img-fluid" src="img/product/p2.jpg" alt="">
-                        <div class="product-details">
-                            <h6>M2</h6>
-                            <div class="price">
-                                <h6>189.000đ</h6>
-                                <h6 class="l-through">189.000đ</h6>
-                            </div>
-                            <div class="prd-bottom">
 
-                                <a href="" class="social-info add-to-cart"
-                                   data-name="M2" data-price="189">
-                                    <span class="ti-bag"></span>
-                                    <p class="hover-text">Thêm vào giỏ</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-heart"></span>
-                                    <p class="hover-text">Thêm vào yêu thích</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-move"></span>
-                                    <p class="hover-text">Xem thêm</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single product -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <img class="img-fluid" src="img/product/p3.jpg" alt="">
-                        <div class="product-details">
-                            <h6>M3</h6>
-                            <div class="price">
-                                <h6>189.000đ</h6>
-                                <h6 class="l-through">210.000đ</h6>
-                            </div>
-                            <div class="prd-bottom">
-                                <a href="" class="social-info add-to-cart"
-                                   data-name="M3" data-price="189">
-                                    <span class="ti-bag"></span>
-                                    <p class="hover-text">Thêm vào giỏ</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-heart"></span>
-                                    <p class="hover-text">Thêm vào yêu thích</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-move"></span>
-                                    <p class="hover-text">Xem thêm</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single product -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <img class="img-fluid" src="img/product/p4.jpg" alt="">
-                        <div class="product-details">
-                            <h6>M4</h6>
-                            <div class="price">
-                                <h6>189.000đ</h6>
-                                <h6 class="l-through">210.000đ</h6>
-                            </div>
-                            <div class="prd-bottom">
-
-                                <a href="" class="social-info add-to-cart"
-                                   data-name="M4" data-price="189">
-                                    <span class="ti-bag"></span>
-                                    <p class="hover-text">Thêm vào giỏ</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-heart"></span>
-                                    <p class="hover-text">Thêm vào yêu thích</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-move"></span>
-                                    <p class="hover-text">Xem thêm</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single product -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <img class="img-fluid" src="img/product/p5.jpg" alt="">
-                        <div class="product-details">
-                            <h6>M5</h6>
-                            <div class="price">
-                                <h6>189.000đ</h6>
-                                <h6 class="l-through">210.000đ</h6>
-                            </div>
-                            <div class="prd-bottom">
-
-                                <a href="" class="social-info add-to-cart"
-                                   data-name="M5" data-price="189">
-                                    <span class="ti-bag"></span>
-                                    <p class="hover-text">Thêm vào giỏ</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-heart"></span>
-                                    <p class="hover-text">Thêm vào yêu thích</p>
-                                </a>
-
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-move"></span>
-                                    <p class="hover-text">Xem thêm</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single product -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <img class="img-fluid" src="img/product/p6.jpg" alt="">
-                        <div class="product-details">
-                            <h6>M6</h6>
-                            <div class="price">
-                                <h6>189.000đ</h6>
-                                <h6 class="l-through">210.000đ</h6>
-                            </div>
-                            <div class="prd-bottom">
-
-                                <a href="" class="social-info add-to-cart"
-                                   data-name="M6" data-price="189">
-                                    <span class="ti-bag"></span>
-                                    <p class="hover-text">Thêm vào giỏ</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-heart"></span>
-                                    <p class="hover-text">Thêm vào yêu thích</p>
-                                </a>
-
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-move"></span>
-                                    <p class="hover-text">Xem thêm</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single product -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <img class="img-fluid" src="img/product/p7.jpg" alt="">
-                        <div class="product-details">
-                            <h6>M7</h6>
-                            <div class="price">
-                                <h6>189.000đ</h6>
-                                <h6 class="l-through">210.000đ</h6>
-                            </div>
-                            <div class="prd-bottom">
-
-                                <a href="" class="social-info add-to-cart"
-                                   data-name="M7" data-price="189">
-                                    <span class="ti-bag"></span>
-                                    <p class="hover-text">Thêm vào giỏ</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-heart"></span>
-                                    <p class="hover-text">Thêm vào yêu thích</p>
-                                </a>
-
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-move"></span>
-                                    <p class="hover-text">Xem thêm</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- single product -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <img class="img-fluid" src="img/product/p8.jpg" alt="">
-                        <div class="product-details">
-                            <h6>M8</h6>
-                            <div class="price">
-                                <h6>189.000đ</h6>
-                                <h6 class="l-through">210.000đ</h6>
-                            </div>
-                            <div class="prd-bottom">
-
-                                <a href="" class="social-info add-to-cart"
-                                   data-name="M8" data-price="189">
-                                    <span class="ti-bag"></span>
-                                    <p class="hover-text">Thêm vào giỏ</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-heart"></span>
-                                    <p class="hover-text">Thêm vào yêu thích</p>
-                                </a>
-
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-move"></span>
-                                    <p class="hover-text">Xem thêm</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
