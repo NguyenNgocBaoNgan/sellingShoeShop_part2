@@ -3,107 +3,39 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <!-- Mobile Specific Meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Favicon-->
-  <link rel="shortcut icon" href="img/fav.png">
-  <!-- Author Meta -->
-  <meta name="author" content="CodePixar">
-  <!-- Meta Description -->
-  <meta name="description" content="">
-  <!-- Meta Keyword -->
-  <meta name="keywords" content="">
-  <!-- meta character set -->
-  <meta charset="UTF-8">
-  <!-- Site Title -->
-  <title>Shop bán giày dép</title>
-  <!--
-          CSS
-          ============================================= -->
-  <link rel="stylesheet" href="css/linearicons.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/themify-icons.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/owl.carousel.css">
-  <link rel="stylesheet" href="css/nice-select.css">
-  <link rel="stylesheet" href="css/nouislider.min.css">
-  <link rel="stylesheet" href="css/ion.rangeSlider.css" />
-  <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
-  <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="CodePixar">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Shop bán giày dép</title>
+    <!--
+            CSS
+            ============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.css"/>
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css"/>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <!-- Start Header Area -->
 <header class="header_area sticky-header">
-  <div class="main_menu">
-    <nav class="navbar navbar-expand-lg navbar-light main_box">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <a class="navbar-brand logo_h " href="index.jsp"><img src="img/logo.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-          <ul class="nav navbar-nav menu_nav ml-auto">
-            <li class="nav-item " ><a class="nav-link" href="index.jsp">Trang chủ</a></li>
-            <li class="nav-item submenu dropdown">
-              <a href="shop/male/boots/Boots.jsp" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
-                 aria-expanded="false">Nam</a>
-              <ul class="dropdown-menu">
-                <li class="nav-item"><a class="nav-link" href="shop/male/boots/Boots.jsp">Boots</a></li>
-                <li class="nav-item"><a class="nav-link" href="shop/male/sandal/Sandal.jsp">Sandal</a></li>
-                <li class="nav-item"><a class="nav-link" href="shop/male/sportShoe/SportShoe.jsp">Giày thể thao</a></li>
-                <li class="nav-item"><a class="nav-link" href="shop/male/runningShoes/Runn1.jsp">Giày chạy bộ</a></li>
-                <li class="nav-item"><a class="nav-link" href="shop/male/soccerShoes/Socc1.jsp">Giày đá banh</a></li>
-              </ul>
-            </li>
-            <li class="nav-item submenu dropdown ">
-              <a href="shop/female/boots/Boots1.jsp" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
-                 aria-expanded="false">Nữ</a>
-              <ul class="dropdown-menu">
-                <li class="nav-item "><a class="nav-link" href="shop/female/boots/Boots1.jsp">Boots</a></li>
-                <li class="nav-item"><a class="nav-link" href="shop/female/sandal/Sandal-01.jsp">Sandal</a></li>
-                <li class="nav-item"><a class="nav-link" href="shop/female/sportShoes/SportShoe-01.jsp">Giày thể thao</a></li>
-                <li class="nav-item"><a class="nav-link" href="shop/female/runningShoes/RunningShoes-01.jsp">Giày chạy bộ - đi bộ</a></li>
-
-              </ul>
-            </li>
-            <li class="nav-item submenu dropdown">
-              <a href="category.jsp" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                 aria-expanded="false">Khuyến mãi</a>
-            </li>
-
-            <li class="nav-item"><a class="nav-link" href="contact.jsp">Liên hệ</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <!--            <li class="nav-item"><a href="login.jsp" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
-            <li><a class="nav-link" href="#" id="cart"><i class="ti-bag" data-toggle="modal" data-target="#cart1"></i><span class="badge"><p><span class="total-count"></span></p></span></a></li>
-
-
-            <li class="nav-item"><a href="login.jsp" class="cart"><span class="ti-user"></span></a></li>
-            <li class="nav-item">
-              <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <div class="search_input" id="search_input_box">
-    <div class="container">
-      <form class="d-flex justify-content-between">
-        <input type="text" class="form-control" id="search_input" placeholder="Tìm kiếm">
-        <button type="submit" class="btn"></button>
-        <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-      </form>
-    </div>
-  </div>
-
+    <jsp:include page="header/Header.jsp"></jsp:include>
 </header>
 <!-- End Header Area -->
 
@@ -113,182 +45,157 @@
 
 <!-- Start Banner Area -->
 <section class="banner-area organic-breadcrumb">
-  <div class="container">
-    <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-      <div class="col-first">
-        <h1>Đăng kí</h1>
-        <nav class="d-flex align-items-center">
-          <a href="index.jsp">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-          <a href="registration.jsp">Đăng kí</a>
-        </nav>
-      </div>
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <div class="col-first">
+                <h1>Đăng kí</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="index.jsp">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="registration.jsp">Đăng kí</a>
+                </nav>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 <!-- End Banner Area -->
 
 <!--================Login Box Area =================-->
 <section class="login_box_area section_gap">
-  <div class="container">
+    <div class="container">
 
 
+        <div class="row justify-content-around">
+            <div class="col-lg-6">
+                <div class="login_form_inner">
+                    <h2>ĐĂNG KÍ</h2>
+                    <!--          <form class="row login_form pb-3" action="#" method="post" id="registrationForm" novalidate="novalidate">-->
+                    <!--            <div class="col-md-12 form-group">-->
+                    <!--              <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Họ">-->
+                    <!--            </div>-->
+                    <!--            <div class="col-md-12 form-group">-->
+                    <!--              <input type="text" class="form-control" id="first_name" name="last_name" placeholder="Tên">-->
+                    <!--            </div>-->
+                    <!--            <div class="col-md-12 form-check form-check-inline">-->
+                    <!--              <div class="mx-4">-->
+                    <!--              <input class="form-check-input" type="radio" name="Male" id="Male" value="0" checked>-->
+                    <!--              <label class="form-check-label" for="Male">-->
+                    <!--                Nam-->
+                    <!--              </label>-->
+                    <!--              </div>-->
 
-    <div class="row justify-content-around">
-      <div class="col-lg-6">
-        <div class="login_form_inner">
-          <h2>ĐĂNG KÍ</h2>
-          <!--          <form class="row login_form pb-3" action="#" method="post" id="registrationForm" novalidate="novalidate">-->
-          <!--            <div class="col-md-12 form-group">-->
-          <!--              <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Họ">-->
-          <!--            </div>-->
-          <!--            <div class="col-md-12 form-group">-->
-          <!--              <input type="text" class="form-control" id="first_name" name="last_name" placeholder="Tên">-->
-          <!--            </div>-->
-          <!--            <div class="col-md-12 form-check form-check-inline">-->
-          <!--              <div class="mx-4">-->
-          <!--              <input class="form-check-input" type="radio" name="Male" id="Male" value="0" checked>-->
-          <!--              <label class="form-check-label" for="Male">-->
-          <!--                Nam-->
-          <!--              </label>-->
-          <!--              </div>-->
+                    <!--              <input class="form-check-input" type="radio" name="Female" id="Female" value="1">-->
+                    <!--              <label class="form-check-label" for="Female">-->
+                    <!--                Nữ-->
+                    <!--              </label>-->
+                    <!--            </div>-->
 
-          <!--              <input class="form-check-input" type="radio" name="Female" id="Female" value="1">-->
-          <!--              <label class="form-check-label" for="Female">-->
-          <!--                Nữ-->
-          <!--              </label>-->
-          <!--            </div>-->
+                    <!--            <div class="col-md-12 form-group">-->
+                    <!--              <input type="text" class="form-control" id="DOB" name="DOB" placeholder="Ngày sinh (dd/mm/yyyy)">-->
+                    <!--            </div>-->
 
-          <!--            <div class="col-md-12 form-group">-->
-          <!--              <input type="text" class="form-control" id="DOB" name="DOB" placeholder="Ngày sinh (dd/mm/yyyy)">-->
-          <!--            </div>-->
+                    <!--            <div class="col-md-12 form-group">-->
+                    <!--              <input type="text" class="form-control" id="email" name="email" placeholder="Email">-->
+                    <!--            </div>-->
 
-          <!--            <div class="col-md-12 form-group">-->
-          <!--              <input type="text" class="form-control" id="email" name="email" placeholder="Email">-->
-          <!--            </div>-->
+                    <!--            <div class="col-md-12 form-group">-->
+                    <!--              <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu">-->
+                    <!--            </div>-->
+                    <!--            <div class="col-md-12 form-group">-->
+                    <!--              <div class="creat_account">-->
+                    <!--                <input type="checkbox" id="f-option2" name="selector">-->
+                    <!--                <label for="f-option2">Duy trì đăng nhập</label>-->
+                    <!--              </div>-->
+                    <!--            </div>-->
+                    <!--            <div class="col-md-12 form-group">-->
+                    <!--              <button type="submit" value="submit" class="primary-btn">Đăng kí</button>-->
+                    <!--              <a href="#">Đã có tài khoản?/Đăng nhập</a>-->
+                    <!--            </div>-->
+                    <!--          </form>-->
 
-          <!--            <div class="col-md-12 form-group">-->
-          <!--              <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu">-->
-          <!--            </div>-->
-          <!--            <div class="col-md-12 form-group">-->
-          <!--              <div class="creat_account">-->
-          <!--                <input type="checkbox" id="f-option2" name="selector">-->
-          <!--                <label for="f-option2">Duy trì đăng nhập</label>-->
-          <!--              </div>-->
-          <!--            </div>-->
-          <!--            <div class="col-md-12 form-group">-->
-          <!--              <button type="submit" value="submit" class="primary-btn">Đăng kí</button>-->
-          <!--              <a href="#">Đã có tài khoản?/Đăng nhập</a>-->
-          <!--            </div>-->
-          <!--          </form>-->
-
-          <form action="" method="POST" class="row login_form pb-3 mb-5 form" id="form-1">
+                    <form action="" method="POST" class="row login_form pb-3 mb-5 form" id="form-1">
 
 
-            <div class="col-md-12 form-group">
-              <label for="fullname" class="form-label">Tên đầy đủ</label>
-              <input id="fullname" name="fullname" type="text" placeholder="VD: Nguyễn Văn Nam" class="form-control">
-              <span class="form-message"></span>
+                        <div class="col-md-12 form-group">
+                            <label for="fullname" class="form-label">Tên đầy đủ</label>
+                            <input id="fullname" name="fullname" type="text" placeholder="VD: Nguyễn Văn Nam"
+                                   class="form-control">
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input id="email" name="email" type="text" placeholder="VD: email@domain.com"
+                                   class="form-control">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="dob" class="form-label">Ngày tháng năm sinh</label>
+                            <input type="text" class="form-control" id="DOB" name="DOB"
+                                   placeholder="Ngày sinh (dd/mm/yyyy)">
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input id="password" name="password" type="password" placeholder="Nhập mật khẩu"
+                                   class="form-control">
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+                            <input id="password_confirmation" name="password_confirmation"
+                                   placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <a href="login.jsp" class="hover-text">Đã có tài khoản?/Đăng nhập</a>
+                            <button class="form-submit">Đăng ký</button>
+                        </div>
+                    </form>
+
+                </div>
             </div>
-
-            <div class="col-md-12 form-group">
-              <label for="email" class="form-label">Email</label>
-              <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
-              <span class="form-message"></span>
-            </div>
-            <div class="col-md-12 form-group">
-              <label for="dob" class="form-label">Ngày tháng năm sinh</label>
-              <input type="text" class="form-control" id="DOB" name="DOB" placeholder="Ngày sinh (dd/mm/yyyy)">
-              <span class="form-message"></span>
-            </div>
-
-            <div class="col-md-12 form-group">
-              <label for="password" class="form-label">Mật khẩu</label>
-              <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
-              <span class="form-message"></span>
-            </div>
-
-            <div class="col-md-12 form-group">
-              <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
-              <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
-              <span class="form-message"></span>
-            </div>
-
-            <div class="col-md-12 form-group">
-              <a href="login.jsp" class="hover-text">Đã có tài khoản?/Đăng nhập</a>
-              <button class="form-submit">Đăng ký</button>
-            </div>
-          </form>
-
         </div>
-      </div>
+
+
+        <!--================End Login Box Area =================-->
+
+
     </div>
-
-
-    <!--================End Login Box Area =================-->
-
-
-  </div>
 </section>
 <!-- start footer Area -->
 <footer class="footer-area section_gap">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3  col-md-6 col-sm-6">
-        <div class="single-footer-widget">
-          <h6>Theo dõi chúng tôi trên các nền tảng</h6>
-          <p></p>
-          <div class="footer-social d-flex align-items-center">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-dribbble"></i></a>
-            <a href="#"><i class="fa fa-behance"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4  col-md-6 col-sm-6">
-      </div>
-      <div class="col-lg-3  col-md-6 col-sm-6">
-        <div class="single-footer-widget mail-chimp">
-          <div class="single-footer-widget">
-            <a href="contact.jsp"><h6>Về chúng tôi</h6></a>
-            <p>Số điện thoại: 0789123456</p>
-            <p>Email: support@shoeshop.com</p>
-            <p>Địa chỉ: khu phố 6, phường Linh Trung, quận Thủ Đức, thành phố Hồ Chí Minh</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-6 col-sm-6">
-        <div class="single-footer-widget">
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- End footer Area -->
+    <jsp:include page="footer/Footerlv1.jsp"></jsp:include>
+</footer><!-- End footer Area -->
+
 
 
 <!--Modal-->
 <div class="modal fade" id="cart1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table class="show-cart table">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="show-cart table">
 
-        </table>
-        <div>Tổng tiền: <span class="total-cart"></span>.000đ</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a  href="cart.jsp"><button type="button" class="btn btn-primary" style="background-color: #ffba00">Thanh toán</button></a>
-      </div>
+                </table>
+                <div>Tổng tiền: <span class="total-cart"></span>.000đ</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="cart.jsp">
+                    <button type="button" class="btn btn-primary" style="background-color: #ffba00">Thanh toán</button>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!--java script -->
@@ -310,41 +217,41 @@
 <script src="js/main.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Mong muốn của chúng ta
-    Validator({
-      form: '#form-1',
-      formGroupSelector: '.form-group',
-      errorSelector: '.form-message',
-      rules: [
-        Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
-        Validator.isEmail('#email'),
-        Validator.minLength('#password', 6),
-        Validator.isRequired('#DOB',"Vui lòng nhập ngày tháng năm sinh"),
-        Validator.isRequired('#password_confirmation'),
-        Validator.isConfirmed('#password_confirmation', function () {
-          return document.querySelector('#form-1 #password').value;
-        }, 'Mật khẩu nhập lại không chính xác')
-      ],
-      onSubmit: function (data) {
-        // Call API
-        console.log(data);
-      }
+    document.addEventListener('DOMContentLoaded', function () {
+        // Mong muốn của chúng ta
+        Validator({
+            form: '#form-1',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+                Validator.isEmail('#email'),
+                Validator.minLength('#password', 6),
+                Validator.isRequired('#DOB', "Vui lòng nhập ngày tháng năm sinh"),
+                Validator.isRequired('#password_confirmation'),
+                Validator.isConfirmed('#password_confirmation', function () {
+                    return document.querySelector('#form-1 #password').value;
+                }, 'Mật khẩu nhập lại không chính xác')
+            ],
+            onSubmit: function (data) {
+                // Call API
+                console.log(data);
+            }
+        });
+        // Validator({
+        //   form: '#form-2',
+        //   formGroupSelector: '.form-group',
+        //   errorSelector: '.form-message',
+        //   rules: [
+        //     Validator.isEmail('#email'),
+        //     Validator.minLength('#password', 6),
+        //   ],
+        //   onSubmit: function (data) {
+        //     // Call API
+        //     console.log(data);
+        //   }
+        // });
     });
-    // Validator({
-    //   form: '#form-2',
-    //   formGroupSelector: '.form-group',
-    //   errorSelector: '.form-message',
-    //   rules: [
-    //     Validator.isEmail('#email'),
-    //     Validator.minLength('#password', 6),
-    //   ],
-    //   onSubmit: function (data) {
-    //     // Call API
-    //     console.log(data);
-    //   }
-    // });
-  });
 </script>
 </body>
 

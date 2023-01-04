@@ -3,7 +3,7 @@ package project.db;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
 import org.jdbi.v3.core.Jdbi;
-import project.model.Account;
+import project.model.Product;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -33,8 +33,8 @@ public class JDBiConnector {
     }
 
     public static void main(String[] args) {
-        List<Account> acc = JDBiConnector.me().withHandle(handle -> {
-            return handle.createQuery("select * from account").mapToBean(Account.class)
+        List<Product> acc = JDBiConnector.me().withHandle(handle -> {
+            return handle.createQuery("select * from Product").mapToBean(Product.class)
                     .stream().collect(Collectors.toList());
         });
 
