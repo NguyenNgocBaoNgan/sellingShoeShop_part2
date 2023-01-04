@@ -133,7 +133,7 @@
                 <nav class="d-flex align-items-center">
                     <a href="../../../index.jsp">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
                     <a href="#">Nữ<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="Boots1.jsp">Boots</a>
+                    <a href="../../../Product.jsp">Boots</a>
                 </nav>
             </div>
         </div>
@@ -236,7 +236,7 @@
                     </select>
                 </div>
                 <div class="pagination">
-                    <a href="Boots1.jsp" >1</a>
+                    <a href="../../../Product.jsp" >1</a>
                     <a href="Boots2.jsp" class="active">2</a>
 
 
@@ -425,7 +425,7 @@
             <div class="filter-bar d-flex flex-wrap align-items-center">
 
                 <div class="pagination">
-                    <a href="Boots1.jsp" >1</a>
+                    <a href="../../../Product.jsp" >1</a>
                     <a href="Boots2.jsp" class="active">2</a>
 
                 </div>
