@@ -39,7 +39,7 @@
 <body>
 <!-- Start Header Area -->
 <header class="header_area sticky-header">
-    <jsp:include page="header/Header.jsp"></jsp:include>
+    <jsp:include page="header.jsp"></jsp:include>
 </header>
 <!-- End Header Area -->
 
@@ -223,43 +223,43 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <% List<Product> list = (List<Product>) request.getAttribute("list");
-                    for (Product p : list) { %>
-                <!-- single product -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-product">
-                        <img class="img-fluid" src="<%= p.getImg() %>" alt="">
-                        <div class="product-details">
-                            <h6><%= p.getName() %></h6>
-                            <div class="price">
-                                <h6><%= p.getPrice() %> VND</h6>
-<%--                                <h6 class="l-through">210.000đ</h6>--%>
-                            </div>
-                            <div class="prd-bottom">
+<%--            <div class="row">--%>
+<%--                <% List<Product> list = (List<Product>) request.getAttribute("list");--%>
+<%--                    for (Product p : list) { %>--%>
+<%--                <!-- single product -->--%>
+<%--                <div class="col-lg-3 col-md-6">--%>
+<%--                    <div class="single-product">--%>
+<%--                        <img class="img-fluid" src="<%= p.getImg() %>" alt="">--%>
+<%--                        <div class="product-details">--%>
+<%--                            <h6><%= p.getName() %></h6>--%>
+<%--                            <div class="price">--%>
+<%--                                <h6><%= p.getPrice() %> VND</h6>--%>
+<%--                                &lt;%&ndash;                                <h6 class="l-through">210.000đ</h6>&ndash;%&gt;--%>
+<%--                            </div>--%>
+<%--                            <div class="prd-bottom">--%>
 
-                                <a href="" class="social-info add-to-cart"
-                                   data-name="M1" data-price="189">
-                                    <span class="ti-bag"></span>
-                                    <p class="hover-text">Thêm vào giỏ</p>
+<%--                                <a href="" class="social-info add-to-cart"--%>
+<%--                                   data-name="M1" data-price="189">--%>
+<%--                                    <span class="ti-bag"></span>--%>
+<%--                                    <p class="hover-text">Thêm vào giỏ</p>--%>
 
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-heart"></span>
-                                    <p class="hover-text">Thêm vào yêu thích</p>
-                                </a>
-                                <a href="" class="social-info">
-                                    <span class="lnr lnr-move"></span>
-                                    <p class="hover-text">Xem thêm</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <% } %>
-                <!-- single product -->
+<%--                                </a>--%>
+<%--                                <a href="" class="social-info">--%>
+<%--                                    <span class="lnr lnr-heart"></span>--%>
+<%--                                    <p class="hover-text">Thêm vào yêu thích</p>--%>
+<%--                                </a>--%>
+<%--                                <a href="" class="social-info">--%>
+<%--                                    <span class="lnr lnr-move"></span>--%>
+<%--                                    <p class="hover-text">Xem thêm</p>--%>
+<%--                                </a>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <% } %>--%>
+<%--                <!-- single product -->--%>
 
-            </div>
+<%--            </div>--%>
         </div>
     </div>
     <!-- single product slide -->
@@ -623,7 +623,7 @@
 
 <!-- start footer Area -->
 <footer class="footer-area section_gap">
-    <jsp:include page="footer/Footerlv1.jsp"></jsp:include>
+    <jsp:include page="footer.jsp"></jsp:include>
 </footer><!-- End footer Area -->
 
 <!--Modal-->
@@ -671,5 +671,3 @@
 <script src="js/gmaps.min.js"></script>
 <script src="js/main.js"></script>
 </body>
-
-</html>

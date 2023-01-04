@@ -43,7 +43,7 @@
 
 <!-- Start Header Area -->
 <header class="header_area sticky-header">
-    <jsp:include page="header/Header.jsp"></jsp:include>
+    <jsp:include page="header.jsp"></jsp:include>
 </header>
 <!-- End Header Area -->
 
@@ -60,7 +60,7 @@
                 <nav class="d-flex align-items-center">
                     <a href="index.jsp">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
                     <a href="#">Nữ<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="Product.jsp">Boots</a>
+                    <a href="product.jsp">Boots</a>
                 </nav>
             </div>
         </div>
@@ -163,7 +163,7 @@
                     </select>
                 </div>
                 <div class="pagination">
-                    <a href="Product.jsp" class="active">1</a>
+                    <a href="product.jsp" class="active">1</a>
                     <a href="shop/female/boots/Boots2.jsp">2</a>
 
 
@@ -352,7 +352,7 @@
             <div class="filter-bar d-flex flex-wrap align-items-center">
 
                 <div class="pagination">
-                    <a href="Product.jsp" class="active">1</a>
+                    <a href="product.jsp" class="active">1</a>
                     <a href="shop/female/boots/Boots2.jsp">2</a>
 
                 </div>
@@ -503,7 +503,7 @@
 
 <!-- start footer Area -->
 <footer class="footer-area section_gap">
-    <jsp:include page="footer/Footerlv1.jsp"></jsp:include>
+    <jsp:include page="footer.jsp"></jsp:include>
 </footer>
 <!-- End footer Area -->
 <!--Modal-->
