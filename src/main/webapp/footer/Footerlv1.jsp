@@ -29,7 +29,7 @@
       <div class="col-lg-3  col-md-6 col-sm-6">
         <div class="single-footer-widget mail-chimp">
           <div class="single-footer-widget">
-            <a href="contact.jsp"><h6>Về chúng tôi</h6></a>
+            <a href="../contact.jsp"><h6>Về chúng tôi</h6></a>
             <p>Số điện thoại: 0789123456</p>
             <p>Email: support@shoeshop.com</p>
             <p>Địa chỉ: khu phố 6, phường Linh Trung, quận Thủ Đức, thành phố Hồ Chí Minh</p>
