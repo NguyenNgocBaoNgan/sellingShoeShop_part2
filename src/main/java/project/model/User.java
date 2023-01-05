@@ -1,12 +1,18 @@
 package project.model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     int idUser;
     String fullName;
     String email;
     String DOB;
     String password;
     int role;
+
+    public User(){
+
+    }
 
     public User(int idUser, String fullName, String email, String DOB, String password, int role) {
         this.idUser = idUser;

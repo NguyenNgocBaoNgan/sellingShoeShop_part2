@@ -15,8 +15,8 @@
     <link href="css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="cssAdmin/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="jsAdmin/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
-    
+    <link rel="stylesheet" type="text/css" href=" lineicons/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link href="cssAdmin/style.css" rel="stylesheet">
     <link href="cssAdmin/style-responsive.css" rel="stylesheet">
@@ -131,7 +131,7 @@
                             </li>
                             <li>
                                 <a href="adminIndex.jsp#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="  imgAd/ui-zac.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Zac Snider</span>
                                     <span class="time">Bây giờ</span>
@@ -143,7 +143,7 @@
                             </li>
                             <li>
                                 <a href="adminIndex.jsp#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="  imgAd/ui-divya.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Divya Manian</span>
                                     <span class="time">40 phút</span>
@@ -155,7 +155,7 @@
                             </li>
                             <li>
                                 <a href="adminIndex.jsp#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="  imgAd/ui-danro.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Dan Rogers</span>
                                     <span class="time">2 giờ.</span>
@@ -167,7 +167,7 @@
                             </li>
                             <li>
                                 <a href="adminIndex.jsp#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="  imgAd/ui-sherman.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Dj Sherman</span>
                                     <span class="time">4 giờ.</span>
@@ -204,7 +204,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="profile.jsp"><img src="assets/img/ui-sam.jpg" class="img-circle"
+                <p class="centered"><a href="profile.jsp"><img src="  imgAd/ui-sam.jpg" class="img-circle"
                                                                 width="60"></a></p>
                 <h5 class="centered">Ngân Nguyễn</h5>
 
@@ -356,7 +356,7 @@
 									<div class="col-sm-6 col-xs-6"></div>
 	                      		</div>
 	                      		<div class="centered">
-										<img src="../../demo/img/product/Nu/RunningShoes/rs1.png" width="120">
+										<img src="../../demo/ imgAd/product/Nu/RunningShoes/rs1.png" width="120">
 	                      		</div>
                       		</div>
                       	</div><!-- /col-md-4 -->
@@ -367,7 +367,7 @@
 								<div class="white-header">
 									<h5>Top người dùng</h5>
 								</div>
-								<p><img src="assets/img/ui-zac.jpg" class="img-circle" width="80"></p>
+								<p><img src="  imgAd/ui-zac.jpg" class="img-circle" width="80"></p>
 								<p><b>Zac Snider</b></p>
 								<div class="row">
 									<div class="col-md-6">
@@ -556,7 +556,7 @@
                       <!-- First Member -->
                       <div class="desc">
                       	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
+                      		<img class="img-circle" src="  imgAd/ui-divya.jpg" width="35px" height="35px" align="">
                       	</div>
                       	<div class="details">
                       		<p><a href="#">DIVYA MANIAN</a><br/>
@@ -567,7 +567,7 @@
                       <!-- Second Member -->
                       <div class="desc">
                       	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-sherman.jpg" width="35px" height="35px" align="">
+                      		<img class="img-circle" src="  imgAd/ui-sherman.jpg" width="35px" height="35px" align="">
                       	</div>
                       	<div class="details">
                       		<p><a href="#">DJ SHERMAN</a><br/>
@@ -578,7 +578,7 @@
                       <!-- Third Member -->
                       <div class="desc">
                       	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-danro.jpg" width="35px" height="35px" align="">
+                      		<img class="img-circle" src="  imgAd/ui-danro.jpg" width="35px" height="35px" align="">
                       	</div>
                       	<div class="details">
                       		<p><a href="#">DAN ROGERS</a><br/>
@@ -590,7 +590,7 @@
                       <!-- Fifth Member -->
             <!--          <div class="desc">
                       	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-sam.jpg" width="35px" height="35px" align="">
+                      		<img class="img-circle" src="  imgAd/ui-sam.jpg" width="35px" height="35px" align="">
                       	</div>
                       	<div class="details">
                       		<p><a href="#">Marcel Newman</a><br/>
