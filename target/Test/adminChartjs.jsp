@@ -13,7 +13,7 @@
     <link href="cssAdmin/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="css/font-awesome.css" rel="stylesheet" />
-        
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link href="cssAdmin/style.css" rel="stylesheet">
     <link href="cssAdmin/style-responsive.css" rel="stylesheet">
@@ -57,7 +57,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="profile.jsp"><img src="assets/img/ui-sam.jpg" class="img-circle"
+                <p class="centered"><a href="profile.jsp"><img src="  imgAd/ui-sam.jpg" class="img-circle"
                                                                 width="60"></a></p>
                 <h5 class="centered">Ngân Nguyễn</h5>
 

@@ -1,3 +1,6 @@
+<%@ page import="project.model.Product" %>
+<%@ page import="java.util.List" %>
+<%@ page import="project.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 <html lang="en">
 <head>
@@ -13,7 +16,7 @@
     <link href="cssAdmin/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="css/font-awesome.css" rel="stylesheet"/>
-
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link href="cssAdmin/style.css" rel="stylesheet">
     <link href="cssAdmin/style-responsive.css" rel="stylesheet">
@@ -56,7 +59,7 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="profile.jsp"><img src="assets/img/ui-sam.jpg" class="img-circle"
+                <p class="centered"><a href="profile.jsp"><img src=" imgAd/ui-sam.jpg" class="img-circle"
                                                                 width="60"></a></p>
                 <h5 class="centered">Ngân Nguyễn</h5>
 
@@ -135,70 +138,35 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Họ</th>
-                                <th>Tên</th>
-                                <th>Username</th>
-                                <th></th>
+                                <th>id</th>
+                                <th>Họ tên</th>
+                                <th>Email</th>
+                                <th>Ngày sinh</th>
+                                <th>Mật khẩu</th>
+                                <th>Quyền</th>
+                                <th>Chức năng</th>
                             </tr>
                             </thead>
                             <tbody>
+                            <% List<User> list = (List<User>) request.getAttribute("listUser");
+                                for (User u : list) { %>
                             <tr>
-                                <td>1</td>
-                                <td>Nguyễn</td>
-                                <td>Bảo Ngân</td>
-                                <td>@mdo</td>
+                                <td><%= u.getIdUser() %></td>
+                                <td><%= u.getFullName() %></td>
+                                <td><%= u.getEmail() %></td>
+                                <td><%= u.getDOB() %></td>
+                                <td><%= u.getRole() %></td>
+
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+<%--                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>--%>
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
+
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Nguyễn</td>
-                                <td>Phương Nhi</td>
-                                <td>@pn</td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Nguyễn</td>
-                                <td>Hồng Linh</td>
-                                <td>@hiln</td>
-\                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Trần</td>
-                                <td>Trọng</td>
-                                <td>@ttt</td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Tiêu</td>
-                                <td>Hữu Chí</td>
-                                <td>@thc</td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
+                            <% } %>
                             </tbody>
+
                         </table>
                     </div>
                     <! --/content-panel -->

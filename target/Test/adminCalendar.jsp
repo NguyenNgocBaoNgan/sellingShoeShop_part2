@@ -14,7 +14,7 @@
     <!--external css-->
     <link href="css/font-awesome.css" rel="stylesheet" />
     <link href="jsAdmin/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
-        
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link href="cssAdmin/style.css" rel="stylesheet">
     <link href="cssAdmin/style-responsive.css" rel="stylesheet">
@@ -127,7 +127,7 @@
                             </li>
                             <li>
                                 <a href="adminIndex.jsp#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="  imgAd/ui-zac.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Zac Snider</span>
                                     <span class="time">Bây giờ</span>
@@ -139,7 +139,7 @@
                             </li>
                             <li>
                                 <a href="adminIndex.jsp#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="  imgAd/ui-divya.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Divya Manian</span>
                                     <span class="time">40 phút</span>
@@ -151,7 +151,7 @@
                             </li>
                             <li>
                                 <a href="adminIndex.jsp#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="  imgAd/ui-danro.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Dan Rogers</span>
                                     <span class="time">2 giờ.</span>
@@ -163,7 +163,7 @@
                             </li>
                             <li>
                                 <a href="adminIndex.jsp#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="  imgAd/ui-sherman.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Dj Sherman</span>
                                     <span class="time">4 giờ.</span>
@@ -199,7 +199,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="profile.jsp"><img src="assets/img/ui-sam.jpg" class="img-circle"
+                <p class="centered"><a href="profile.jsp"><img src="  imgAd/ui-sam.jpg" class="img-circle"
                                                                 width="60"></a></p>
                 <h5 class="centered">Ngân Nguyễn</h5>
 

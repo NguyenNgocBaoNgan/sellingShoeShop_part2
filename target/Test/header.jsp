@@ -28,14 +28,14 @@
               for (Category c : listC) {
             %>
             <li class="nav-item submenu dropdown">
-              <a href="category?cid=<%=c.getIdCat()%>"><%= c.getCatName()%>
+              <a class="nav-link" href="category?cid=<%=c.getIdCat()%>"><%= c.getCatName()%>
                   </a>
               <ul class="dropdown-menu">
                 <%
                   for (CategoryItem cc : listCC) {
                     if (cc.getIdCat() == c.getIdCat()) {
                 %>
-                <li><a href="categoryi?idI=<%=cc.getId()%>"><%= cc.getName() %>
+                <li class="nav-item"><a class="nav-link" href="categoryi?idI=<%=cc.getId()%>"><%= cc.getName() %>
                 </a></li>
                 <% } %>
                 <% }%>

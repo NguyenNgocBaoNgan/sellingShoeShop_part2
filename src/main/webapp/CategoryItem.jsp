@@ -1,3 +1,10 @@
+<%@ page import="project.model.Category" %>
+<%@ page import="java.util.List" %>
+<%@ page import="project.model.Product" %>
+<%@ page import="project.model.CategoryItem" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="project.service.ProductService" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 <html lang="zxx" class="no-js">
 <meta http-equiv="Content-Type" charset="UTF-8">
@@ -56,11 +63,16 @@
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Giày nữ</h1>
+                <%
+                    Category c = (Category) request.getAttribute("c");
+                    CategoryItem lci = (CategoryItem) request.getAttribute("lci");
+                %>
+                <h1>Giày <%=c.getCatName()%></h1>
                 <nav class="d-flex align-items-center">
-                    <a href="index.jsp">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="#">Nữ<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="product.jsp">Boots</a>
+                    <a href="home">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+
+                    <a href="category?cid=<%=c.getIdCat()%>"><%=c.getCatName()%><span class="lnr lnr-arrow-right"></span></a>
+                    <a href="#"><%=lci.getName()%></a>
                 </nav>
             </div>
         </div>
@@ -173,14 +185,21 @@
             <!-- Start Best Seller -->
             <section class="lattest-product-area pb-40 category-list">
                 <div class="row">
+                    <%
+                        NumberFormat nf = NumberFormat.getInstance();
+                        nf.setMinimumFractionDigits(0);
+                        List<Product> pByIdi = (List<Product>) request.getAttribute("listPByIdi");
+                        for (Product p : pByIdi) {
+                    %>
                     <!-- single product -->
                     <div class="col-lg-4 col-md-6">
+
                         <div class="single-product">
-                            <img class="img-fluid resize" src="../../img/product/Nu/Boots/cgbd.png" alt="">
+                            <img class="img-fluid resize" src="<%=p.getImg()%>" alt="">
                             <div class="product-details">
-                                <a href="single-product-b1.jsp"><h6>Boots nữ cao gót buộc dây(Đen)</h6></a>
+                                <a href="detail?id=<%=p.getId()%>"><h6><%=p.getName()%></h6></a>
                                 <div class="price">
-                                    <h6>500.000đ</h6>
+                                    <h6><%=nf.format(p.getPrice())%>đ</h6>
                                     <!--										<h6 class="l-through">210.000đ</h6>-->
                                 </div>
                                 <div class="prd-bottom">
@@ -201,150 +220,9 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                    <!-- single product -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid resize" src="../../img/product/Nu/Boots/chelsea boots.png" alt="">
-                            <div class="product-details">
-                                <a href="single-product-b2.jsp"><h6>Chelsea boots(Đen)</h6></a>
-                                <div class="price">
-                                    <h6>670.200đ</h6>
-                                    <h6 class="l-through">720.000đ</h6>
-                                </div>
-                                <div class="prd-bottom">
-
-                                    <a href="" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Thêm vào giỏ</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Yêu thích</p>
-                                    </a>
-
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Xem thêm</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid resize" src="../../img/product/Nu/Boots/cgct.png" alt="">
-                            <div class="product-details">
-                                <a href="single-product-b3.jsp"><h6>Boots nữ co giãn cổ thấp</h6></a>
-                                <div class="price">
-                                    <h6>552.000đ</h6>
-                                    <h6 class="l-through">610.000đ</h6>
-                                </div>
-                                <div class="prd-bottom">
-
-                                    <a href="" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Thêm vào giỏ</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Yêu thích</p>
-                                    </a>
-
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Xem thêm</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid resize" src="../../img/product/Nu/Boots/clmv.png" alt="">
-                            <div class="product-details">
-                                <a href="single-product-b4.jsp"><h6>Boots nữ cổ lửng mũi vuông(Nâu)</h6></a>
-                                <div class="price">
-                                    <h6>850.000đ</h6>
-                                </div>
-                                <div class="prd-bottom">
-
-                                    <a href="" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Thêm vào giỏ</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Yêu thích</p>
-                                    </a>
-
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Xem thêm</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid resize" src="../../img/product/Nu/Boots/cloc.png" alt="">
-                            <div class="product-details">
-                                <a href="single-product-b5.jsp"><h6>Boots nữ cổ lửng ôm chân(Nâu)</h6></a>
-                                <div class="price">
-                                    <h6>630.000đ</h6>
-                                </div>
-                                <div class="prd-bottom">
-
-                                    <a href="" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Thêm vào giỏ</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Yêu thích</p>
-                                    </a>
-
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Xem thêm</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid resize" src="../../img/product/Nu/Boots/cndbmn.png" alt="">
-                            <div class="product-details">
-                                <a href="single-product-b6.jsp"><h6>Boots nữ cổ ngắn da bóng mũi nhọn</h6></a>
-                                <div class="price">
-                                    <h6>352.000đ</h6>
-                                    <h6 class="l-through">480.000đ</h6>
-                                </div>
-                                <div class="prd-bottom">
-
-                                    <a href="" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Thêm vào giỏ</p>
-                                    </a>
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Yêu thích</p>
-                                    </a>
-
-                                    <a href="" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Xem thêm</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <%}%>
                 </div>
             </section>
             <!-- End Best Seller -->
