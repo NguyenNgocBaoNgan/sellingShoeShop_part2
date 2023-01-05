@@ -12,9 +12,10 @@ public class Product implements Serializable {
     String detailPro;
 
     long price;
-    int idAd;
 
-    public Product(int id, String name, String img, int quantity, String status, String detailPro, long price, int idAd) {
+    public Product() {
+    }
+    public Product(int id, String name, String img, int quantity, String status, String detailPro, long price) {
         this.id = id;
         this.name = name;
         this.img = img;
@@ -22,7 +23,6 @@ public class Product implements Serializable {
         this.status = status;
         this.detailPro = detailPro;
         this.price = price;
-        this.idAd = idAd;
     }
 
     public int getId() {
@@ -82,13 +82,6 @@ public class Product implements Serializable {
         this.price = price;
     }
 
-    public int getIdAd() {
-        return idAd;
-    }
-
-    public void setIdAd(int idAd) {
-        this.idAd = idAd;
-    }
 
     @Override
     public String toString() {
@@ -100,7 +93,6 @@ public class Product implements Serializable {
                 ", status='" + status + '\'' +
                 ", detailPro='" + detailPro + '\'' +
                 ", price=" + price +
-                ", idAd=" + idAd +
                 '}';
     }
 }

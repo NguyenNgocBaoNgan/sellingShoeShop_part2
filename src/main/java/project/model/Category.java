@@ -1,14 +1,18 @@
 package project.model;
 
-public class Category {
-    int idCat;
-    String name;
-    int idPar;
+import java.io.Serializable;
 
-    public Category(int idCat, String name, int idPar) {
+public class Category implements Serializable {
+    int idCat;
+    String catName;
+
+    public Category() {
+
+    }
+    public Category(int idCat, String catName) {
         this.idCat = idCat;
-        this.name = name;
-        this.idPar = idPar;
+        this.catName = catName;
+
     }
 
     public int getIdCat() {
@@ -19,28 +23,20 @@ public class Category {
         this.idCat = idCat;
     }
 
-    public String getName() {
-        return name;
+    public String getCatName() {
+        return catName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCatName(String catName) {
+        this.catName = catName;
     }
 
-    public int getIdPar() {
-        return idPar;
-    }
-
-    public void setIdPar(int idPar) {
-        this.idPar = idPar;
-    }
 
     @Override
     public String toString() {
         return "Category{" +
                 "idCat=" + idCat +
-                ", name='" + name + '\'' +
-                ", idPar=" + idPar +
+                ", name='" + catName + '\'' +
                 '}';
     }
 }

@@ -14,9 +14,9 @@ public class Utf8 implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
-        chain.doFilter(request, response);
         request.setCharacterEncoding("utf8");
         response.setCharacterEncoding("utf8");
+        chain.doFilter(request, response);
 
     }
 }
