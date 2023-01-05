@@ -1,6 +1,8 @@
 package project.model;
 
-public class ParentCategory {
+import java.io.Serializable;
+
+public class ParentCategory implements Serializable {
     int idPar;
     String name;
 
