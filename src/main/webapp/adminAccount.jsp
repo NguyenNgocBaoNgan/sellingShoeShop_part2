@@ -139,6 +139,7 @@
                             <thead>
                             <tr>
                                 <th>id</th>
+                                <th>UserName</th>
                                 <th>Họ tên</th>
                                 <th>Email</th>
                                 <th>Ngày sinh</th>
@@ -151,6 +152,7 @@
                             <% List<User> list = (List<User>) request.getAttribute("listUser");
                                 for (User u : list) { %>
                             <tr>
+                                <td><%= u.getUserName() %></td>
                                 <td><%= u.getIdUser() %></td>
                                 <td><%= u.getFullName() %></td>
                                 <td><%= u.getEmail() %></td>

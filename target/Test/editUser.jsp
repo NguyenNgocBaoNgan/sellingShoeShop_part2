@@ -54,75 +54,87 @@
     <div class="container ">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end row features-inner ">
             <div class="col-first">
-                <h1>Đăng nhập</h1>
+                <h1>Chỉnh sửa thông tin</h1>
                 <nav class="d-flex align-items-center">
                     <a href="index.jsp">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="category.jsp">Đăng nhập</a>
+                    <a href="EditUser">Chỉnh sửa thông tin</a>
                 </nav>
             </div>
         </div>
     </div>
 </section>
+
 <section class="section_gap">
     <div class="container-xl px-4 mt-4 cent">
-            <% User u = (User) request.getAttribute("user");
-            System.out.println(u);%>
+        <% User u = (User) request.getAttribute("user");
+        %>
         <div class="container container-profile edit-U">
             <nav class="nav nav-borders">
                 <a class="nav-link active ms-0" href="#" target="__blank">Hồ sơ</a>
             </nav>
-            <div class="row">
-                <div class="col-xl-8">
-                    <div class="card mb-4">
-                        <div class="card-header">Hồ sơ của tôi</div>
-                        <div class="card-body">
-                            <form action="editUser" method="post">
-                                <!-- Form Group (username)-->
-                                <input contenteditable='false' type="hidden" value="<%=u.getIdUser()%>"
-                                       name="idAccount">
-                                <div class="row gx-3 mb-3">
-                                    <div class="col-md-6">
-                                        <div>
-                                            <label class="small mb-1" for="inputFirstName">Tên đầy đủ</label>
-                                            <input class="form-control"
-                                                   name="fullName"
-                                                   id="inputFirstName" type="text"
-                                                   placeholder="Enter your first name" value="<%=u.getFullName()%>">
-                                        </div>
-                                        <div>
-                                            <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                            <input class="form-control"
-                                                   name="email"
-                                                   id="inputEmailAddress" type="email"
-                                                   placeholder="Enter your email address"    value="<%=u.getEmail()%>">
-                                        </div>
-                                        <div>
-                                            <label class="small mb-1" for="inputDOB">Ngày sinh</label>
-                                            <input class="form-control"
-                                                   name="DOB"
-                                                   id="inputDOB" type="tel"
-                                                   placeholder="Enter your phone number"value="<%=u.getDOB()%>">
-                                        </div>
-                                        <div>
-                                            <label class="small mb-1" for="inputPass">Mật khẩu</label>
-                                            <input class="form-control"
-                                                   name="phone"
-                                                   id="inputPass" type="tel"
-                                                   placeholder="Enter your phone number" value="<%=u.getPassword()%>">
-                                        </div>
+            <%--            <div class="row">--%>
+            <div class="col-xl-8">
+                <div class="card mb-4">
+                    <div class="card-header">Hồ sơ của tôi</div>
+                    <div class="card-body">
+                        <form action="EditUser" method="post">
+                            <!-- Form Group (username)-->
+                            <input contenteditable='false' type="hidden" value="<%=u.getIdUser()%>"
+                                   name="idUser">
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <div>
+                                        <label class="small mb-1" for="inputUsername">Tên đăng nhập</label>
+                                        <input class="form-control"
+                                               name="userName"
+                                               id="inputUsername" type="text"
+                                               placeholder="Tên đăng nhập" value="<%=u.getUserName()%>">
                                     </div>
                                 </div>
-                            </form>
-                            <button class="btn btn-primary" type="submit">Lưu thông tin</button>
-                            <%--                            <a href="admin-reserpassword?idA=<%=ac.getId()%>" class="btn btn-primary">Cấp lại mật khẩu</a>--%>
-                            <%--                            <a href="AdminDeleteAccount?idA=<%=ac.getId()%>" class="btn btn-primary" >Xóa tài khoản</a>--%>
-                            <button class="btn btn-primary" type="submit">Quay về</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <div>
+                                        <label class="small mb-1" for="inputFirstName">Tên đầy đủ</label>
+                                        <input class="form-control"
+                                               name="fullName"
+                                               id="inputFirstName" type="text"
+                                               placeholder="Hãy nhập họ và tên" value="<%=u.getFullName()%>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <div>
+                                        <label class="small mb-1" for="inputEmailAddress">Email</label>
+                                        <input class="form-control"
+                                               name="email"
+                                               id="inputEmailAddress" type="email"
+                                               placeholder="Hãy nhập đia chỉ email" value="<%=u.getEmail()%>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-3 mb-3">
+                                <div class="col-md-6">
+                                    <div>
+                                        <label class="small mb-1" for="inputDOB">Ngày sinh</label>
+                                        <input class="form-control"
+                                               name="DOB"
+                                               id="inputDOB" type="tel"
+                                               placeholder="Ngày tháng năm sinh" value="<%=u.getDOB()%>">
+                                    </div>
+                                </div>
+                            </div>
+            <button class="btn btn-primary" type="submit">Lưu thông tin</button>
+            <button class="btn btn-primary" type="button">Đăng xuất</button>
+            <%--                                <a href="profile?command=logout"</a>--%>
+            <%--                                   style=" color: #fff;">--%>
+            </form>
         </div>
+    </div>
+    </div>
+    </div>
+    <%--        </div>--%>
 </section>
 <!-- start footer Area -->
 <footer class="footer-area section_gap">

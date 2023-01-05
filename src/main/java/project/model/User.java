@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class User implements Serializable {
     int idUser;
+    String userName;
     String fullName;
     String email;
     String DOB;
@@ -14,8 +15,9 @@ public class User implements Serializable {
 
     }
 
-    public User(int idUser, String fullName, String email, String DOB, String password, int role) {
+    public User(int idUser, String userName, String fullName, String email, String DOB, String password, int role) {
         this.idUser = idUser;
+        this.userName = userName;
         this.fullName = fullName;
         this.email = email;
         this.DOB = DOB;
@@ -29,6 +31,14 @@ public class User implements Serializable {
 
     public void setIdUser(int idUser) {
         this.idUser = idUser;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getFullName() {
@@ -75,6 +85,7 @@ public class User implements Serializable {
     public String toString() {
         return "User{" +
                 "idUser=" + idUser +
+                ", userName='" + userName + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", email='" + email + '\'' +
                 ", DOB='" + DOB + '\'' +

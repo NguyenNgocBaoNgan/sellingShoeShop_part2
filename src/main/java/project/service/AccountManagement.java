@@ -14,6 +14,7 @@ public class AccountManagement {
             return handle.createQuery("select * from user where idUser = ?").bind(0, id).mapToBean(User.class).stream().collect(Collectors.toList()).get(0);
         });
     }
+
     public static User getUser() {
         return JDBiConnector.me().withHandle(handle -> {
             return handle.createQuery("select * from user where idUser = 2").mapToBean(User.class).stream().collect(Collectors.toList()).get(0);
@@ -46,27 +47,18 @@ public class AccountManagement {
 //        return list;
     }
 
-    public static void editUserWithId(int idUser, String fullName, String email, String DOB, String password, int role) {
+    public static void editUserWithId(String userName,String fullName, String email, String DOB, String password, String id) {
         JDBiConnector.me().withHandle(handle -> {
-            return handle.createQuery("update user set idUser = ?, fullName = ?, email = ?, DOB = ?, password = ?, role = ? ")
-                    .bind(0, idUser).bind(1, fullName).bind(2, email).bind(3, DOB).bind(4, password).bind(5, role)
-                    .mapToBean(User.class).stream().collect(Collectors.toList());
+            return handle.createUpdate("update user set userName =?,fullName = ?, email = ?, DOB = ?, password = ? where idUser = ?")
+                    .bind(0, userName).bind(1, fullName).bind(2, email).bind(3, DOB).bind(4, password).execute();
         });
     }
-
-
-    public static void deleteAccount(String id) {
-        JDBiConnector.me().withHandle(h ->
-                h.createUpdate("delete from user where idUser= ?").bind(0, id).execute()
-        );
+    public static void editUserWithId(String userName,String fullName, String email, String DOB) {
+        JDBiConnector.me().withHandle(handle -> {
+            return handle.createUpdate("update user set userName =?,fullName = ?, email = ?, DOB = ? where idUser = 2")
+                    .bind(0, userName).bind(1, fullName).bind(2, email).bind(3, DOB).execute();
+        });
     }
-    public static void deleteAccount() {
-        JDBiConnector.me().withHandle(h ->
-                        h.createUpdate("delete from user where idUser= 2").execute()
-//                h.createUpdate("delete from user where idUser= ?").bind(0, id).execute()
-        );
-    }
-
     public static void main(String[] args) {
 //        String idUser ="1";
         Jdbi me = JDBiConnector.me();
@@ -76,7 +68,7 @@ public class AccountManagement {
 //             return handle.createQuery("select * from user where id=?").bind(0, idUser).mapToBean(User.class).stream().collect(Collectors.toList()).get(0);
 //        });
 
-        System.out.println(getUser("2"));
+        editUserWithId("linhhh","Nguyễn Thị Hồng Linh", "linh@gmail.com", "2002/06/04");
     }
 
 }

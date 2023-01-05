@@ -18,11 +18,20 @@ public class EditUser extends HttpServlet {
         User u =  AccountManagement.getUser();
 
         request.setAttribute("user",u);
-        request.getRequestDispatcher("editUser.jsp").forward(request, response);
+        request.getRequestDispatcher("EditUser.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String id = request.getParameter("idUser");
+        String userName = request.getParameter("userName");
+        String fullName = request.getParameter("fullName");
+        String email = request.getParameter("email");
+        String DOB = request.getParameter("DOB");
+//        String password = request.getParameter("password");
+
+        AccountManagement.editUserWithId(userName,fullName,email,DOB);
+        response.sendRedirect("EditUser");
 
     }
 }
