@@ -13,7 +13,7 @@
     <link href="cssAdmin/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="css/font-awesome.css" rel="stylesheet" />
-        
+	<link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link href="cssAdmin/style.css" rel="stylesheet">
     <link href="cssAdmin/style-responsive.css" rel="stylesheet">
@@ -98,7 +98,7 @@
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
     <script type="text/javascript" src="jsAdmin/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("assets/img/login-bg.jpg", {speed: 500});
+        $.backstretch("  imgAd/login-bg.jpg", {speed: 500});
     </script>
 
 

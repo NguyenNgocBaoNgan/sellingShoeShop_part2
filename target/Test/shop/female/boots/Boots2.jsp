@@ -92,7 +92,7 @@
                         <li class="nav-item"><a class="nav-link" href="../../../contact.jsp">Liên hệ</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <!--            <li class="nav-item"><a href="login.jsp" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
+                        <!--            <li class="nav-item"><a href="adminlogin.jsp" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
                         <li><a class="nav-link" href="#" id="cart"><i class="ti-bag" data-toggle="modal" data-target="#cart1"></i><span class="badge"><p><span class="total-count"></span></p></span></a></li>
 
 
@@ -133,7 +133,7 @@
                 <nav class="d-flex align-items-center">
                     <a href="../../../index.jsp">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
                     <a href="#">Nữ<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="../../../Product.jsp">Boots</a>
+                    <a href="../../../product.jsp">Boots</a>
                 </nav>
             </div>
         </div>
@@ -236,7 +236,7 @@
                     </select>
                 </div>
                 <div class="pagination">
-                    <a href="../../../Product.jsp" >1</a>
+                    <a href="../../../product.jsp" >1</a>
                     <a href="Boots2.jsp" class="active">2</a>
 
 
@@ -425,7 +425,7 @@
             <div class="filter-bar d-flex flex-wrap align-items-center">
 
                 <div class="pagination">
-                    <a href="../../../Product.jsp" >1</a>
+                    <a href="../../../product.jsp" >1</a>
                     <a href="Boots2.jsp" class="active">2</a>
 
                 </div>

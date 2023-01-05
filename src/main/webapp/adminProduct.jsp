@@ -17,7 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="cssAdmin/style.css" rel="stylesheet">
     <link href="cssAdmin/style-responsive.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -56,7 +56,7 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="profile.jsp"><img src="assets/img/ui-sam.jpg" class="img-circle"
+                <p class="centered"><a href="profile.jsp"><img src="  imgAd/ui-sam.jpg" class="img-circle"
                                                                 width="60"></a></p>
                 <h5 class="centered">Ngân Nguyễn</h5>
 

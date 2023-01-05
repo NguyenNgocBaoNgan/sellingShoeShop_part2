@@ -92,7 +92,7 @@
                         <li class="nav-item"><a class="nav-link" href="../../../contact.jsp">Liên hệ</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <!--            <li class="nav-item"><a href="login.jsp" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
+                        <!--            <li class="nav-item"><a href="adminlogin.jsp" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
                         <li><a class="nav-link" href="#" id="cart"><i class="ti-bag" data-toggle="modal" data-target="#cart1"></i><span class="badge"><p><span class="total-count"></span></p></span></a></li>
 
 

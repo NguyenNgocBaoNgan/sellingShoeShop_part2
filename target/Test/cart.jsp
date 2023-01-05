@@ -35,7 +35,7 @@
 <body>
 <!-- Start Header Area -->
 <header class="header_area sticky-header">
-    <jsp:include page="header/Header.jsp"></jsp:include>
+    <jsp:include page="header.jsp"></jsp:include>
 </header>
 <!-- End Header Area -->
 
@@ -238,7 +238,7 @@
 
 <!-- start footer Area -->
 <footer class="footer-area section_gap">
-    <jsp:include page="footer/Footerlv1.jsp"></jsp:include>
+    <jsp:include page="footer.jsp"></jsp:include>
 </footer>
 <!-- End footer Area -->
 

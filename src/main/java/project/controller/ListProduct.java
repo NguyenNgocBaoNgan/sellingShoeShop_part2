@@ -13,10 +13,9 @@ import java.util.List;
 public class ListProduct extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        request.getRequestDispatcher("/shop/male/boots/Boots.jsp").forward(request, response);
         List<Product> list = ProductService.getListProduct();
         request.setAttribute("list", list);
-        request.getRequestDispatcher("product.jsp").forward(request, response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
     @Override

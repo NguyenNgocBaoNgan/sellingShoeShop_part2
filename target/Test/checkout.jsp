@@ -35,7 +35,7 @@
 <body>
 <!-- Start Header Area -->
 <header class="header_area sticky-header">
-    <jsp:include page="header/Header.jsp"></jsp:include>
+    <jsp:include page="header.jsp"></jsp:include>
 </header>
 <!-- End Header Area -->
 
@@ -63,7 +63,7 @@
 <section class="checkout_area section_gap">
     <div class="container">
         <!--        <div class="check_title">-->
-        <!--            <h2>Returning Customer? <a href="login.jsp">Click here to login</a></h2>-->
+        <!--            <h2>Returning Customer? <a href="adminlogin.jsp">Click here to login</a></h2>-->
         <!--        </div>-->
 
         <!--        <div class="cupon_area">-->
@@ -168,7 +168,7 @@
 
 <!-- start footer Area -->
 <footer class="footer-area section_gap">
-    <jsp:include page="footer/Footerlv1.jsp"></jsp:include>
+    <jsp:include page="footer.jsp"></jsp:include>
 </footer>
 <!-- End footer Area -->
 
