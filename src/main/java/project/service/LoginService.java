@@ -48,7 +48,7 @@ public class LoginService {
     //
     public static void signUpA(String email, String pass) {
         JDBiConnector.me().withHandle(h ->
-                h.createUpdate("insert into user (userName,fullname,email,dob,pass,managerAccount,managerProduct,managerBog,managerHome,assistant,manageOrder)" +
+                h.createUpdate("insert into user (userName,fullname,email,dob,password,managerAccount,managerProduct,managerBog,managerHome,assistant,manageOrder)" +
                                 "VALUES (null,null,?,null,?,0,0,0,0,0,0)")
                         .bind(0, email)
                         .bind(1, pass)
