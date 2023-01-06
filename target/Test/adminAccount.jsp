@@ -145,19 +145,20 @@
                                 <th>Ngày sinh</th>
                                 <th>Mật khẩu</th>
                                 <th>Quyền</th>
-                                <th>Chức năng</th>
+                                <th>Công cụ</th>
                             </tr>
                             </thead>
                             <tbody>
                             <% List<User> list = (List<User>) request.getAttribute("listUser");
                                 for (User u : list) { %>
                             <tr>
-                                <td><%= u.getUserName() %></td>
                                 <td><%= u.getIdUser() %></td>
+                                <td><%= u.getUserName() %></td>
                                 <td><%= u.getFullName() %></td>
                                 <td><%= u.getEmail() %></td>
                                 <td><%= u.getDOB() %></td>
-                                <td><%= u.getRole() %></td>
+                                <td><%= u.getPassword() %></td>
+                                <td><%= u.getRole()%></td>
 
                                 <td>
 <%--                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>--%>
