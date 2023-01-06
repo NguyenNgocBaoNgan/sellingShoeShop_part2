@@ -2,6 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="project.model.CategoryItem" %>
 <%@ page import="project.service.ProductService" %>
+<%@ page import="project.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -48,11 +49,38 @@
             <li class="nav-item"><a class="nav-link" href="contact.jsp">Liên hệ</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <!--            <li class="nav-item"><a href="adminlogin.jsp" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
-            <li><a class="nav-link" href="#" id="cart"><i class="ti-bag" data-toggle="modal" data-target="#cart1"></i><span class="badge"><p><span class="total-count"></span></p></span></a></li>
+            <li class="nav-item"><a href="cart.jsp" class="cart" id="cart"><span class="ti-bag"></span><span class="badge"><p><span class="total-count"></span></p></span></a></li>
+<%--            <li><a class="nav-link" href="#" id="cart"><i class="ti-bag" data-toggle="modal" data-target="#cart1"></i><span class="badge"><p><span class="total-count"></span></p></span></a></li>--%>
+
+            <%
+              User ac = (User) request.getSession().getAttribute("auth");
+              if (ac == null) {
+
+            %>
+            <li class="nav-item">
+                <a href="login.jsp" class="cart"><span class="ti-user"></span></a></li>
+            <% }%>
+
+            <%
+              if (ac != null) {
+//                            phân quyền
+                if (ac.getAssistant() == 0 && ac.getManagerHome() == 0 && ac.getManagerBlog() == 0
+                        && ac.getManagerProduct() == 0 && ac.getManagerAccount() == 0) {
+            %>
+
+            <li class="nav-item">
+              <a href="profile" class="cart">
+                <%=ac.getUserName()%>
 
 
-            <li class="nav-item"><a href="login.jsp" class="cart"><span class="ti-user"></span></a></li>
+              </a></li>
+            <% } else {%>
+            <li class="nav-item">
+              <a href="admin-overview" class="cart">
+                <%=ac.getUserName()%>
+             </a></li>
+            <% }}%>
+
             <li class="nav-item">
               <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
             </li>

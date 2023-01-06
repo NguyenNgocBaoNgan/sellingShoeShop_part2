@@ -59,7 +59,7 @@
 </section>
 <!-- End Banner Area -->
 
-<!--================Login Box Area =================-->
+<!--================LoginController Box Area =================-->
 <section class="login_box_area section_gap">
     <div class="container">
 
@@ -160,7 +160,7 @@
         </div>
 
 
-        <!--================End Login Box Area =================-->
+        <!--================End LoginController Box Area =================-->
 
 
     </div>

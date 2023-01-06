@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "Login", value = "/Login")
-public class Login extends HttpServlet {
+@WebServlet(name = "LoginController", value = "/login")
+public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String user = request.getParameter("user");
-        String pass = request.getParameter("pass");
-        User u = LoginService.getAccount(user, Encode.enCodeMD5(pass) );
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        User u = LoginService.getAccout(email, password );
 
         if(u == null){
             request.setAttribute("mess", "Sai user hoặc mật khẩu!");
