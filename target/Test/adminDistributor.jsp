@@ -40,80 +40,15 @@
         <a href="adminIndex.jsp" class="logo"><b>Shop bán giày dép</b></a>
         <!--logo end-->
 
-        <div class="top-menu">
-            <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="adminlogin.jsp">Đăng xuất</a></li>
-            </ul>
-        </div>
+        <jsp:include page="headerAdmin.jsp"></jsp:include>
     </header>
     <!--header end-->
+
     <!-- **********************************************************************************************************************************************************
     MAIN SIDEBAR MENU
     *********************************************************************************************************************************************************** -->
     <!--sidebar start-->
-    <aside>
-        <div id="sidebar" class="nav-collapse ">
-            <!-- sidebar menu start-->
-            <ul class="sidebar-menu" id="nav-accordion">
-
-                <p class="centered"><a href="profile.jsp"><img src="  imgAd/ui-sam.jpg" class="img-circle"
-                                                                width="60"></a></p>
-                <h5 class="centered">Ngân Nguyễn</h5>
-
-                <li class="mt">
-                    <a href="adminIndex.jsp">
-                        <i class="fa fa-dashboard"></i>
-                        <span>Trang chủ</span>
-                    </a>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-cogs"></i>
-                        <span>Các thành phần</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="adminCalendar.jsp">Lịch</a></li>
-
-                        <li><a href="adminTodo_list.jsp">Todo List</a></li>
-                    </ul>
-
-                <li class="sub-menu">
-                    <a href="adminBasic_table.jsp">
-                        <i class="fa fa-th"></i>
-                        <span>Bảng dữ liệu</span>
-                    </a>
-
-                </li>
-                <li class="sub-menu">
-                    <a href="adminChartjs.jsp">
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Biểu đồ</span>
-                    </a>
-
-                </li>
-                <li class="active" class="sub-menu">
-                    <a  href="adminDistributor.jsp">
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Nhà cung cấp</span>
-                    </a>
-                </li>
-                <li class="sub-menu">
-                    <a href="adminAccount.jsp">
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Tài khoản</span>
-                    </a>
-                </li>
-                <li class="sub-menu">
-                    <a href="adminProduct.jsp">
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Sản phẩm</span>
-                    </a>
-                </li>
-
-            </ul>
-            <!-- sidebar menu end-->
-        </div>
-    </aside>
+    <jsp:include page="sideBarAdmin.jsp"></jsp:include>
     <!--sidebar end-->
 
     <!-- **********************************************************************************************************************************************************

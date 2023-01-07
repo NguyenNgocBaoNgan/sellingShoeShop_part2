@@ -21,6 +21,7 @@ public class AdminAccount extends HttpServlet {
 
         request.setAttribute("listUser", listUser);
         request.getRequestDispatcher("adminAccount.jsp").forward(request, response);
+
     }
 
     @Override
