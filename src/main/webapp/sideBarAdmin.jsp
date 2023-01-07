@@ -72,7 +72,12 @@
                     <span>Sản phẩm</span>
                 </a>
             </li>
-
+            <li class="sub-menu">
+                <a href="adminCategory">
+                    <i class=" fa fa-bar-chart-o"></i>
+                    <span>Danh mục</span>
+                </a>
+            </li>
 
 
         </ul>
