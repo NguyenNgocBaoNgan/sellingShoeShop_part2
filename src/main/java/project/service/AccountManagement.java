@@ -47,16 +47,10 @@ public class AccountManagement {
 //        return list;
     }
 
-    public static void editUserWithId(String userName,String fullName, String email, String DOB, String password, String id) {
+    public static void editUserWithId(String userName,String fullName, String email, String DOB,String id) {
         JDBiConnector.me().withHandle(handle -> {
-            return handle.createUpdate("update user set userName =?,fullName = ?, email = ?, DOB = ?, password = ? where idUser = ?")
-                    .bind(0, userName).bind(1, fullName).bind(2, email).bind(3, DOB).bind(4, password).execute();
-        });
-    }
-    public static void editUserWithId(String userName,String fullName, String email, String DOB) {
-        JDBiConnector.me().withHandle(handle -> {
-            return handle.createUpdate("update user set userName =?,fullName = ?, email = ?, DOB = ? where idUser = 2")
-                    .bind(0, userName).bind(1, fullName).bind(2, email).bind(3, DOB).execute();
+            return handle.createUpdate("update user set userName =?,fullName = ?, email = ?, DOB = ? where idUser = ?")
+                    .bind(0, userName).bind(1, fullName).bind(2, email).bind(3, DOB).bind(4, id).execute();
         });
     }
     public static void main(String[] args) {
@@ -68,7 +62,6 @@ public class AccountManagement {
 //             return handle.createQuery("select * from user where id=?").bind(0, idUser).mapToBean(User.class).stream().collect(Collectors.toList()).get(0);
 //        });
 
-        editUserWithId("linhhh","Nguyễn Thị Hồng Linh", "linh@gmail.com", "2002/06/04");
     }
 
 }
