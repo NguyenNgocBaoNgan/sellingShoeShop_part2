@@ -15,7 +15,7 @@ import java.util.List;
 public class AdminAccount extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        User ac = (User) request.getSession().getAttribute("auth");
+        User u = (User) request.getSession().getAttribute("auth");
 
         List<User> listUser = AccountManagement.getAllUser();
 
