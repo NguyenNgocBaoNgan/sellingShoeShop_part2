@@ -80,13 +80,7 @@
                         <li><a href="adminTodo_list.jsp">Todo List</a></li>
                     </ul>
 
-                <li class="sub-menu">
-                    <a href="adminBasic_table.jsp">
-                        <i class="fa fa-th"></i>
-                        <span>Bảng dữ liệu</span>
-                    </a>
 
-                </li>
                 <li class="sub-menu">
                     <a href="adminChartjs.jsp">
                         <i class=" fa fa-bar-chart-o"></i>
@@ -138,25 +132,26 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>id</th>
+                                <th>ID</th>
                                 <th>UserName</th>
                                 <th>Họ tên</th>
                                 <th>Email</th>
                                 <th>Ngày sinh</th>
                                 <th>Mật khẩu</th>
                                 <th>Quyền</th>
-                                <th>Chức năng</th>
+
                             </tr>
                             </thead>
                             <tbody>
                             <% List<User> list = (List<User>) request.getAttribute("listUser");
                                 for (User u : list) { %>
                             <tr>
-                                <td><%= u.getUserName() %></td>
                                 <td><%= u.getIdUser() %></td>
+                                <td><%= u.getUserName() %></td>
                                 <td><%= u.getFullName() %></td>
                                 <td><%= u.getEmail() %></td>
                                 <td><%= u.getDOB() %></td>
+                                <td><%= u.getPassword()%></td>
                                 <td><%= u.getRole() %></td>
 
                                 <td>
