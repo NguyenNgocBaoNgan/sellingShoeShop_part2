@@ -77,7 +77,13 @@
                         <li><a href="adminTodo_list.jsp">Todo List</a></li>
                     </ul>
 
+                <li class="sub-menu">
+                    <a href="adminBasic_table.jsp">
+                        <i class="fa fa-th"></i>
+                        <span>Bảng dữ liệu</span>
+                    </a>
 
+                </li>
                 <li class="sub-menu">
                     <a href="adminChartjs.jsp">
                         <i class=" fa fa-bar-chart-o"></i>

@@ -64,81 +64,86 @@
         </div>
     </div>
 </section>
-<% User u1 = (User) request.getSession().getAttribute("auth");
-    User u2 = LoginService.getAccoutById(String.valueOf(u1.getIdUser()));
-%>
-<div class="container container-profile" style="margin-top: 90px;">
+
+<section>
+    <% User u1 = (User) request.getSession().getAttribute("auth");
+        User u2 = LoginService.getAccoutById(String.valueOf(u1.getIdUser()));
+    %>
+    <div class="container container-profile" style="margin-top: 90px;">
 
 
-    <nav class="nav nav-borders">
-        <a class="nav-link active ms-0" href="profile">Hồ sơ</a>
-        <a class="nav-link" href="buyOrder">Đơn mua</a>
-        <a class="nav-link" href="#">Thông báo</a>
-    </nav>
+        <nav class="nav nav-borders">
+            <a class="nav-link active ms-0" href="profile">Hồ sơ</a>
+            <a class="nav-link" href="buyOrder">Đơn mua</a>
+            <a class="nav-link" href="#">Thông báo</a>
+        </nav>
 
 
-    <div class="row">
-        <div class="col-xl-8">
-            <!-- Account details card-->
-            <div class="card mb-4">
-                <div class="card-header">Hồ sơ của tôi</div>
-                <div class="card-body">
-                    <form action="EditProfile">
-                        <!-- Form Group (username)-->
-                        <input type="hidden" value="<%=u1.getIdUser()%>" name="idUser">
-                        <div class="mb-3">
-                            <label class="small mb-1" for="inputUsername">Tên đăng nhập</label>
-                            <input class="form-control" id="inputUsername" type="text"
-                                   placeholder="Enter your username" value="<%=u1.getUserName()%>">
-                        </div>
-                        <!-- Form Row-->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (first name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputFirstName">Tên đầy đủ</label>
-                                <input class="form-control"
-                                       name="fullName"
-                                       id="inputFirstName" type="text"
-                                       placeholder="Enter your first name" value="<%=u2.getFullName()%>">
+        <div class="row">
+            <div class="col-xl-8">
+                <!-- Account details card-->
+                <div class="card mb-4">
+                    <div class="card-header">Hồ sơ của tôi</div>
+                    <div class="card-body">
+                        <form action="EditProfile">
+                            <!-- Form Group (username)-->
+                            <input type="hidden" value="<%=u1.getIdUser()%>" name="idUser">
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputUsername">Tên đăng nhập</label>
+                                <input class="form-control" id="inputUsername" type="text" name="userName"
+                                       placeholder="Enter your username" value="<%=u1.getUserName()%>">
                             </div>
-
-                        </div>
-                        <!-- Form Row        -->
-                        <!-- Form Group (email address)-->
-                        <div class="mb-3">
-                            <label class="small mb-1" for="inputEmailAddress">Email</label>
-                            <input class="form-control"
-                                   name="email"
-                                   id="inputEmailAddress" type="email"
-                                   placeholder="Enter your email address" value="<%=u2.getEmail()%>">
-                        </div>
-                        <div class="row gx-3 mb-3">
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLocation">Địa chỉ</label>
-                                <input class="form-control"
-                                       name="DOB"
-                                       id="inputLocation" type="text"
-                                       placeholder="Enter your location" value="<%=u2.getDOB()%>">
+                            <!-- Form Row-->
+                            <div class="mb-3">
+                                <!-- Form Group (first name)-->
+                                <div>
+                                    <label class="small mb-1" for="inputFirstName">Tên đầy đủ</label>
+                                    <input class="form-control"
+                                           name="fullName"
+                                           id="inputFirstName" type="text"
+                                           placeholder="Enter your first name" value="<%=u2.getFullName()%>">
+                                </div>
                             </div>
-                        </div>
-                        <!-- Form Row-->
-                        <!-- Save changes button-->
-                        <button class="btn btn-primary" type="submit" href="profile?command=edit">Lưu thông tin</button>
-                        <button class="btn btn-primary" type="button"><a href="profile?command=logout"
-                                                                         style=" color: #fff;">Đăng xuất</a>
-                        </button>
-                    </form>
+                            <!-- Form Row        -->
+                            <!-- Form Group (email address)-->
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputEmailAddress">Email</label>
+                                <input class="form-control"
+                                       name="email"
+                                       id="inputEmailAddress" type="email"
+                                       placeholder="Enter your email address" value="<%=u2.getEmail()%>">
+                            </div>
+                            <div class="mb-3">
+                                <div>
+                                    <label class="small mb-1" for="inputLocation">Địa chỉ</label>
+                                    <input class="form-control"
+                                           name="DOB"
+                                           id="inputLocation" type="text"
+                                           placeholder="Enter your location" value="<%=u2.getDOB()%>">
+                                </div>
+                            </div>
+                            <!-- Form Row-->
+                            <!-- Save changes button-->
+                            <button class="btn btn-primary" type="submit" href="profile?command=edit">Lưu thông tin
+                            </button>
+                            <button class="btn btn-primary" type="button"><a href="profile?command=logout"
+                                                                             style=" color: #fff;">Đăng xuất</a>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 <!-- start footer Area -->
 <footer class="footer-area section_gap">
     <jsp:include page="footer.jsp"></jsp:include>
 </footer><!-- End footer Area -->
 
 <!--Modal-->
-<div class="modal fade" id="cart1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="cart1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog modal-lg container" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -155,13 +160,13 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="cart.jsp" type="button" class="btn btn-primary" style="background-color: #ffba00"> Thanh
+                <a href="cart.jsp" type="button" class="btn btn-primary" style="background-color: #ffba00">
+                    Thanh
                     toán</a>
             </div>
         </div>
     </div>
 </div>
-
 </div>
 <!--Java Script-->
 <script src="js/vendor/jquery-2.2.4.min.js"></script>
