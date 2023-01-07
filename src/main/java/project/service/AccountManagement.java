@@ -54,14 +54,6 @@ public class AccountManagement {
         });
     }
     public static void main(String[] args) {
-//        String idUser ="1";
-        Jdbi me = JDBiConnector.me();
-
-//         List<User> listU = me.withHandle(handle -> {
-//             int idUser;
-//             return handle.createQuery("select * from user where id=?").bind(0, idUser).mapToBean(User.class).stream().collect(Collectors.toList()).get(0);
-//        });
-
     }
 
 }
