@@ -112,7 +112,7 @@ public class ProductService {
 
     public static Product getProductById(String id) {
         return JDBiConnector.me().withHandle(handle -> {
-            return handle.createQuery("select * from product  where id = ?")
+            return handle.createQuery("select * from product  where idPro = ?")
                     .bind(0, id)
                     .mapToBean(Product.class)
                     .stream().collect(Collectors.toList()).get(0);

@@ -204,7 +204,7 @@
                                 </div>
                                 <div class="prd-bottom">
 
-                                    <a href="" class="social-info">
+                                    <a href="cart?command=insertItem&product_id=<%=p.getId ()%>" class="social-info">
                                         <span class="ti-bag"></span>
                                         <p class="hover-text">Thêm vào giỏ</p>
                                     </a>
@@ -402,7 +402,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a  href="cart.jsp"><button type="button" class="btn btn-primary" style="background-color: #ffba00">Thanh toán</button></a>
+                <a  href="cart1.jsp"><button type="button" class="btn btn-primary" style="background-color: #ffba00">Thanh toán</button></a>
             </div>
         </div>
     </div>

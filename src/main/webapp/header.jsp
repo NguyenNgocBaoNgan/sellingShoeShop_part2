@@ -3,6 +3,8 @@
 <%@ page import="project.model.CategoryItem" %>
 <%@ page import="project.service.ProductService" %>
 <%@ page import="project.model.User" %>
+<%@ page import="project.model.Cart" %>
+<%@ page import="project.service.CartService" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -48,17 +50,16 @@
 
                     <li class="nav-item"><a class="nav-link" href="contact.jsp">Liên hệ</a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a href="cart.jsp" class="cart" id="cart"><span class="ti-bag"></span><span class="badge"><p><span class="total-count"></span></p></span></a></li>
-                    <%--            <li><a class="nav-link" href="#" id="cart"><i class="ti-bag" data-toggle="modal" data-target="#cart1"></i><span class="badge"><p><span class="total-count"></span></p></span></a></li>--%>
 
+                <ul class="nav navbar-nav navbar-right">
                     <%
                         User ac = (User) request.getSession().getAttribute("auth");
                         if (ac == null) {
 
                     %>
                     <li class="nav-item">
-                        <a href="login.jsp" class="cart"><span class="ti-user"></span></a></li>
+                        <a href="login.jsp" class="cart"><span class="ti-user"></span></a>
+                    </li>
                     <% }%>
 
                     <%
@@ -68,7 +69,7 @@
                                     && ac.getManagerProduct() == 0 && ac.getManagerAccount() == 0) {
                     %>
 
-                    <li class="nav-item" style="margin-top: 28px">
+                    <li class="nav-item user" style="margin-top: 28px">
                         <a href="profile" class="cart">
                             <%=ac.getUserName()%>
 
@@ -76,10 +77,29 @@
                         </a></li>
                     <% } else {%>
                     <li class="nav-item" style="margin-top: 28px">
-                        <a href="adminHome" class="cart">
+                        <a href="admin-overview" class="cart">
                             <%=ac.getUserName()%>
                         </a></li>
                     <% }}%>
+
+                    <li class="nav-item">
+                        <%if (ac == null) {%>
+                        <a href="cart1.jsp" class="cart" id="cart">
+                            <span class="ti-bag"></span><span class="badge">
+                    <p><span class="total-count"></span></p></span>
+                        </a>
+
+                        <% }%>
+                        <%
+                            if (ac != null) {
+                                List<Cart> c = (List<Cart>) CartService.getAllItemCart(String.valueOf(ac.getIdUser()));
+                        %>
+                        <a href="show-cart" class="cart" id="cart">
+                            <span class="ti-bag"></span><span class="badge">
+                     <p><%=c.size()%></p></span>
+                        </a>
+                        <% }%>
+                    </li>
 
                     <li class="nav-item">
                         <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>

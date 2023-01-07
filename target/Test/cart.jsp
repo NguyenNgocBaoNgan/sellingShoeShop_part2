@@ -1,3 +1,8 @@
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="project.model.Cart" %>
+<%@ page import="java.util.List" %>
+<%@ page import="project.model.Product" %>
+<%@ page import="project.service.ProductService" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 
 <html>
@@ -51,7 +56,7 @@
                 <h1>Giỏ hàng</h1>
                 <nav class="d-flex align-items-center">
                     <a href="index.jsp">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="cart.jsp">Giỏ hàng</a>
+                    <a href="cart1.jsp">Giỏ hàng</a>
                 </nav>
             </div>
         </div>
@@ -71,116 +76,90 @@
                         <th scope="col">Giá</th>
                         <th scope="col">Số lượng</th>
                         <th scope="col">Tổng</th>
+                        <th scope="col">Thao tác</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="img/product/Nam/Boots/b1.1.png" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <p>Giày Boot Nam Đế Cao Màu Vàng PALA GN400</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>550.000đ</h5>
-                        </td>
-                        <td>
-                            <div class="product_count">
-                                <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                       class="input-text qty">
-                                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                        class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i>
-                                </button>
-                                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                        class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i>
-                                </button>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>550.000đ</h5>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="img/product/Nam/Boots/b2.1.png" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <p>Giày boot nam màu trơn Không có dây kéo</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>806.000đ</h5>
-                        </td>
-                        <td>
-                            <div class="product_count">
-                                <input type="text" name="qty" id="sst2" maxlength="12" value="1" title="Quantity:"
-                                       class="input-text qty">
-                                <button onclick="var result = document.getElementById('sst2'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                        class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i>
-                                </button>
-                                <button onclick="var result = document.getElementById('sst2'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                        class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i>
-                                </button>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>806.000đ</h5>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="img/product/Nam/Boots/b3.1.png" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <p>Nam Giày ống Chelsea Suedette Mặc vào</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>623.000đ</h5>
-                        </td>
-                        <td>
-                            <div class="product_count">
-                                <input type="text" name="qty" id="sst3" maxlength="12" value="1" title="Quantity:"
-                                       class="input-text qty">
-                                <button onclick="var result = document.getElementById('sst3'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                        class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i>
-                                </button>
-                                <button onclick="var result = document.getElementById('sst3'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                        class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i>
-                                </button>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>623.000đ</h5>
-                        </td>
-                    </tr>
-                    <tr class="bottom_button">
-                        <td>
-                            <a class="gray_btn" href="#">Cập nhật giỏ hàng</a>
-                        </td>
-                        <td>
+                    <%
+                        NumberFormat nf = NumberFormat.getInstance();
+                        nf.setMinimumFractionDigits(0);
+                        int totalPrice = 0;
 
-                        </td>
-                        <td>
+                        List<Cart> cartList = (List<Cart>) request.getAttribute("listCart");
+                        for (Cart c : cartList) {
+                            Product p = ProductService.getProductById(String.valueOf(c.getIdProduct()));
+                            totalPrice += p.getPrice() * c.getQuantity();
 
-                        </td>
-                        <td>
-                            <div class="cupon_text d-flex align-items-center">
-                                <input type="text" placeholder="Mã giảm giá">
-                                <a class="primary-btn" href="#">Áp dụng</a>
+                    %>
+                    <tr>
+                        <td class="cart_product_img cart_product_desc" >
+                            <div class="media">
+                                <div class="d-flex">
+                                    <a href="detail?id=<%=p.getId()%>"><img src="<%=p.getImg()%>" alt="Product"></a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="detail?id=<%=p.getId()%>"><%=p.getName()%>
+                                </div>
                             </div>
                         </td>
+                        <td class="price">
+                            <%=nf.format(p.getPrice())%>
+                        </td>
+                        <td class="qty">
+                            <div class="qty-btn d-flex">
+
+                                <div class="quantity">
+                                    <div class="cart-quantity-btn">
+
+                                        <a href="cart?command=subItem&product_id=<%=c.getIdProduct()%> "
+                                           class="btn11"
+                                           style="text-decoration: none;background-color: #fd7e14; padding: 4px">
+                                            <i class="ti-minus" style="color: #FFFFFF"></i>
+                                        </a>
+
+                                        <input class="cart-quantity-input" type="text"
+                                               value="<%=c.getQuantity()%>"
+                                               autocomplete="off" size="2" disabled="">
+
+                                        <a href="cart?command=addItem&product_id=<%=c.getIdProduct()%>"
+                                           class="btn11"
+                                           style="text-decoration: none; background-color: #fd7e14;  padding: 4px">
+                                            <i class="ti-plus" style="color: #FFFFFF"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="cart_product_desc">
+                            <%=nf.format(c.getQuantity() * p.getPrice())%>
+                        </td>
+                        <td class="cart_product_desc">
+                            <a href="cart?command=deleteItem&product_id=<%=c.getIdProduct()%> "
+                               class="btn btn-sm btn-primary btn-minus"
+                               style="text-decoration: none;background-color: #fd7e14">
+                                <i class="ti-close"></i>
+                            </a>
+                        </td>
                     </tr>
+
+                    <%--                    <tr class="bottom_button">--%>
+                    <%--                        <td>--%>
+                    <%--                            <a class="gray_btn" href="#">Cập nhật giỏ hàng</a>--%>
+                    <%--                        </td>--%>
+                    <%--                        <td>--%>
+
+                    <%--                        </td>--%>
+                    <%--                        <td>--%>
+
+                    <%--                        </td>--%>
+                    <%--                        <td>--%>
+                    <%--                            <div class="cupon_text d-flex align-items-center">--%>
+                    <%--                                <input type="text" placeholder="Mã giảm giá">--%>
+                    <%--                                <a class="primary-btn" href="#">Áp dụng</a>--%>
+                    <%--                            </div>--%>
+                    <%--                        </td>--%>
+                    <%--                    </tr>--%>
                     <tr class="shipping_area">
                         <td>
 
@@ -192,7 +171,7 @@
                             <h5>Giao hàng</h5>
                         </td>
                         <td>
-                            <h5>20.000đ</h5>
+                            <h5>Miễn phí</h5>
                         </td>
                     </tr>
 
@@ -204,10 +183,16 @@
 
                         </td>
                         <td>
-                            <h5>Tổng cộng</h5>
+                            <h5>Tổng tiền hàng</h5>
                         </td>
                         <td>
-                            <h5>1.999.000đ</h5>
+                            <h5><%=nf.format(totalPrice)%>đ</h5>
+                        </td>
+                        <td>
+                            <h5>Tổng thanh toán</h5>
+                        </td>
+                        <td>
+                            <h5><%=nf.format(totalPrice)%>đ</h5>
                         </td>
                     </tr>
 
@@ -228,6 +213,7 @@
                             </div>
                         </td>
                     </tr>
+                    <%}%>
                     </tbody>
                 </table>
             </div>
@@ -260,7 +246,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="cart.jsp" type="button" class="btn btn-primary" style="background-color: #ffba00"> Thanh toán</a>
+                <a href="cart1.jsp" type="button" class="btn btn-primary" style="background-color: #ffba00"> Thanh toán</a>
             </div>
         </div>
     </div>
