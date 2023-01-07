@@ -1,3 +1,5 @@
+<%@ page import="project.model.Product" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 <html lang="en">
 <head>
@@ -77,13 +79,7 @@
                         <li><a href="adminTodo_list.jsp">Todo List</a></li>
                     </ul>
 
-                <li class="sub-menu">
-                    <a href="adminBasic_table.jsp">
-                        <i class="fa fa-th"></i>
-                        <span>Bảng dữ liệu</span>
-                    </a>
 
-                </li>
                 <li class="sub-menu">
                     <a href="adminChartjs.jsp">
                         <i class=" fa fa-bar-chart-o"></i>
@@ -131,123 +127,39 @@
                 <div class="col-md-12 mt">
                     <div class="content-panel">
                         <table class="table table-hover">
-                            <h4><i class="fa fa-angle-right"></i> Sản phẩm</h4>
+
                             <hr>
                             <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Mã sản phẩm</th>
+                                <th>ID</th>
                                 <th>Tên</th>
-                                <th>Loại</th>
+                                <th>Số lượng</th>
                                 <th>Giá</th>
                                 <th>Trạng thái</th>
-                                <th></th>
+
+
                             </tr>
                             </thead>
                             <tbody>
+                           <% List<Product> list = (List<Product>) request.getAttribute("listProduct");
+                            for(Product p: list) {%>
                             <tr>
-                                <td>1</td>
-                                <td>GbtsNam-Do-37</td>
-                                <td>Boots Chealsea</td>
-                                <td>Giày Boots</td>
-                                <td>450.000 đ</td>
-                                <td><span class="label label-success label-mini">mới nhập</span></td>
+                                <td><%= p.getId() %></td>
+                                <td><%= p.getName()%></td>
+                                <td><%= p.getQuantity()%></td>
+                                <td><%= p.getPrice()%></td>
+                                <td><%= p.getStatus()%></td>
+
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                    <%--                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>--%>
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
+
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>GTTNu-Xanh-36</td>
-                                <td>Giày thể thao Nike</td>
-                                <td>Giày thể thao</td>
-                                <td>1.850.000 đ</td>
-                                <td><span class="label label-success label-mini">Mới nhập</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>GCBNam-Xam-42</td>
-                                <td>Giày chạy bộ Adidas</td>
-                                <td>Giày chạy bộ</td>
-                                <td>1.550.000 đ</td>
-                                <td><span class="label label-info label-mini">Còn hàng</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>GSDNam-Do-42</td>
-                                <td>Giày sandal Tonic</td>
-                                <td>Giày chạy bộ</td>
-                                <td>1.550.000 đ</td>
-                                <td><span class="label label-danger label-mini">Giảm giá</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>GSDNam-Do-39</td>
-                                <td>Giày sandal Tonic</td>
-                                <td>Giày chạy bộ</td>
-                                <td>1.550.000 đ</td>
-                                <td><span class="label label-danger label-mini">Giảm giá</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>GSDNu-Cam-40</td>
-                                <td>Giày sandal Biti's</td>
-                                <td>Giày chạy bộ</td>
-                                <td>1.550.000 đ</td>
-                                <td><span class="label label-info label-mini">Còn hàng</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>GSDNu-Do-40</td>
-                                <td>Giày sandal Biti's</td>
-                                <td>Giày chạy bộ</td>
-                                <td>1.550.000 đ</td>
-                                <td><span class="label label-default label-mini">Hết hàng</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>GSDNu-Hong-40</td>
-                                <td>Giày sandal Biti's</td>
-                                <td>Giày sandal</td>
-                                <td>1.550.000 đ</td>
-                                <td><span class="label label-success label-mini">Mới nhập</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
+                           <% } %>
+
+
                             </tr>
                             </tbody>
                         </table>
