@@ -46,7 +46,7 @@
 				<%= mess %>
 			</div>
 			<%}%>
-			<button type="submit">Đăng nhập</button>
+			<button type="submit" style="background: #ff9800;border-color:#ff9800">Đăng nhập</button>
 			<span>Hoặc đăng kí bằng</span>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab ti-facebook"></i></a>
@@ -57,12 +57,12 @@
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">
-			<div class="overlay-panel overlay-left">
+			<div class="overlay-panel overlay-left" >
 				<h1>Chào mừng bạn đến DST</h1>
 				<p>Đăng nhập nhanh để nhận ưu đãi nào!</p>
 				<button class="ghost" id="signIn">Đăng nhập</button>
 			</div>
-			<div class="overlay-panel overlay-right">
+			<div class="overlay-panel overlay-right" style="background: #ffba00">
 				<h1>Xin chào!</h1>
 				<p>Nếu bạn chưa có tào khoản hãy đăng kí ngay nào!</p>
 				<button class="ghost" id="signUp">Đăng kí</button>

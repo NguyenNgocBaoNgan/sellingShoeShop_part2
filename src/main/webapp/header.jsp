@@ -68,14 +68,14 @@
                         && ac.getManagerProduct() == 0 && ac.getManagerAccount() == 0) {
             %>
 
-            <li class="nav-item">
+            <li class="nav-item" style="margin-top: 28px">
               <a href="profile" class="cart">
                 <%=ac.getUserName()%>
 
 
               </a></li>
             <% } else {%>
-            <li class="nav-item">
+            <li class="nav-item" style="margin-top: 28px">
               <a href="admin-overview" class="cart">
                 <%=ac.getUserName()%>
              </a></li>
