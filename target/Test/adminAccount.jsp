@@ -81,13 +81,6 @@
                     </ul>
 
                 <li class="sub-menu">
-                    <a href="adminBasic_table.jsp">
-                        <i class="fa fa-th"></i>
-                        <span>Bảng dữ liệu</span>
-                    </a>
-
-                </li>
-                <li class="sub-menu">
                     <a href="adminChartjs.jsp">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Biểu đồ</span>
@@ -138,7 +131,7 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>id</th>
+                                <th>ID</th>
                                 <th>UserName</th>
                                 <th>Họ tên</th>
                                 <th>Email</th>
