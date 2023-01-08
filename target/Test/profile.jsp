@@ -69,14 +69,14 @@
     <% User u1 = (User) request.getSession().getAttribute("auth");
         User u2 = LoginService.getAccoutById(String.valueOf(u1.getIdUser()));
     %>
-    <div class="container container-profile" style="margin-top: 90px;">
+    <div class="container container-profile" >
 
 
-        <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="profile">Hồ sơ</a>
-            <a class="nav-link" href="buyOrder">Đơn mua</a>
-            <a class="nav-link" href="#">Thông báo</a>
-        </nav>
+<%--        <nav class="nav nav-borders">--%>
+<%--            <a class="nav-link active ms-0" href="profile">Hồ sơ</a>--%>
+<%--            <a class="nav-link" href="buyOrder">Đơn mua</a>--%>
+<%--            <a class="nav-link" href="#">Thông báo</a>--%>
+<%--        </nav>--%>
 
 
         <div class="row">
@@ -115,7 +115,7 @@
                             </div>
                             <div class="mb-3">
                                 <div>
-                                    <label class="small mb-1" for="inputLocation">Địa chỉ</label>
+                                    <label class="small mb-1" for="inputLocation">Ngày sinh</label>
                                     <input class="form-control"
                                            name="DOB"
                                            id="inputLocation" type="text"
