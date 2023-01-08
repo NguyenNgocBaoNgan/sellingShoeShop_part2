@@ -67,7 +67,7 @@
                 </a>
             </li>
             <li class="sub-menu">
-                <a href="adminProduct">
+                <a href="adminProduct.jsp">
                     <i class=" fa fa-bar-chart-o"></i>
                     <span>Sản phẩm</span>
                 </a>

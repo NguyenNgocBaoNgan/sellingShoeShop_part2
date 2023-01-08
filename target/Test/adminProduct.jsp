@@ -68,7 +68,7 @@
                 <div class="col-md-12 mt">
                     <div class="content-panel">
                         <table class="table table-hover">
-                             <hr>
+                            <hr>
                             <thead>
                             <tr>
                                 <th>ID</th>
@@ -98,9 +98,9 @@
 
                     </tr>
                     <% } %>
-                        </table>
-                    </div><! --/content-panel -->
-                </div><!-- /col-md-12 -->
+                    </table>
+                </div><! --/content-panel -->
+            </div><!-- /col-md-12 -->
 
             </div>
         </section>
