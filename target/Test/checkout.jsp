@@ -1,3 +1,10 @@
+<%@ page import="project.service.LoginService" %>
+<%@ page import="project.model.User" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="project.model.Cart" %>
+<%@ page import="project.model.Product" %>
+<%@ page import="project.service.ProductService" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 
 <html>
@@ -62,76 +69,95 @@
 <!--================Checkout Area =================-->
 <section class="checkout_area section_gap">
     <div class="container">
-        <!--        <div class="check_title">-->
-        <!--            <h2>Returning Customer? <a href="adminlogin.jsp">Click here to login</a></h2>-->
-        <!--        </div>-->
 
-        <!--        <div class="cupon_area">-->
-        <!--            <div class="check_title">-->
-        <!--                <h2>Have a coupon? <a href="#">Click here to enter your code</a></h2>-->
-        <!--            </div>-->
-        <!--            <input type="text" placeholder="Enter coupon code">-->
-        <!--            <a class="tp_btn" href="#">Apply Coupon</a>-->
-        <!--        </div>-->
         <div class="billing_details">
             <div class="row">
                 <div class="col-lg-8">
                     <h3>Chi tiết hóa đơn</h3>
-                    <form class="row contact_form" action="#" method="post" novalidate="novalidate" id="checkoutForm">
+                    <form class="row contact_form" action="checkout" method="post">
+                        <% User ac = (User) request.getSession().getAttribute("auth");
+                            User a1 = LoginService.getAccoutById(String.valueOf(ac.getIdUser()));
+
+                        %>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="first" name="name" placeholder="Họ*">
+                            <label>Họ </label><br/>
+                            <input type='text' name='firstName' placeholder='Họ*' id='firstname-input'
+                                   class='name-input'/>
                             <p class="form-message"></p>
                         </div>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="last" name="name" placeholder="Tên*">
+                            <label>Tên </label><br/>
+                            <input type='text' name='lastName' placeholder='Tên' id='lastname-input'
+                                   class='name-input'/>
                             <p class="form-message"></p>
                         </div>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại*">
+                            <label>Số điện thoại</label><br/>
+                            <input type='text' name='phone'
+                                   value="<%=a1.getPhone()%>"
+                                   placeholder='Số điện thoại' id='contact-input'
+                                   class='number-input'/>
                             <p class="form-message"></p>
                         </div>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="email" name="email" placeholder="Email*">
+                            <label>Email</label><br/>
+                            <input type='email' name='email'
+                                   value="<%=a1.getEmail()%>"
+                                   placeholder='Địa chỉ email' id='email-input'
+                                   class='email-input'/>
                             <p class="form-message"></p>
                         </div>
 
                         <div class="col-md-12 form-group p_star">
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Địa chỉ*">
+                            <label>Địa chỉ </label><br/>
+                            <input type='text' name='address'
+                                   value="<%=a1.getAddress()%>"
+                                   placeholder='Địa chỉ' id='address-input'
+                                   class='address-input'/>
                             <p class="form-message"></p>
                         </div>
+<%--                        <div class="col-md-12 form-group p_star">--%>
+<%--                            <input type="text" class="form-control" id="city" name="city" placeholder="Thành phố*">--%>
+<%--                            <p class="form-message"></p>--%>
+<%--                        </div>--%>
 
-                        <!--                        <div class="col-md-12 form-group">-->
-                        <!--                            <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP">-->
-                        <!--                        </div>-->
-                        <!--                        <div class="col-md-12 form-group">-->
-                        <!--                            <div class="creat_account">-->
-                        <!--                                <input type="checkbox" id="f-option2" name="selector">-->
-                        <!--                                <label for="f-option2">Create an account?</label>-->
-                        <!--                            </div>-->
-                        <!--                        </div>-->
-                        <div class="col-md-12 form-group">
-                            <div class="creat_account">
-                                <h3>Ghi chú đơn hàng</h3>
-                                <!--                                <input type="checkbox" id="f-option3" name="selector">-->
-                                <!--                                <label for="f-option3">Ship to a different address?</label>-->
-                            </div>
-                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Ghi chú"></textarea>
+<%--                        <div class="col-md-12 form-group">--%>
+<%--                            <div class="creat_account">--%>
+<%--                                <h3>Ghi chú đơn hàng</h3>--%>
+<%--                                <!--                                <input type="checkbox" id="f-option3" name="selector">-->--%>
+<%--                                <!--                                <label for="f-option3">Ship to a different address?</label>-->--%>
+<%--                            </div>--%>
+<%--                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Ghi chú"></textarea>--%>
+<%--                        </div>--%>
+                        <div class="col-md-6" id="form-submit">
+                            <input type='submit' value=' Xác nhận'/>
                         </div>
                     </form>
                 </div>
                 <div class="col-lg-4">
                     <div class="order_box">
                         <h2>Đơn hàng của bạn</h2>
+                        <%
+                            NumberFormat nf = NumberFormat.getInstance();
+                            nf.setMinimumFractionDigits(0);
+                            int totalPrice = 0;
+
+                            List<Cart> cartList = (List<Cart>) request.getAttribute("listCart");
+                            for (Cart c : cartList) {
+                                Product p = ProductService.getProductById(String.valueOf(c.getIdProduct()));
+                                totalPrice += p.getPrice() * c.getQuantity();
+
+                        %>
                         <ul class="list">
+                            <input name="idCart" type="hidden" value="<%=c.getIdCart()%>">
                             <li><a href="#">Sản phẩm <span>Giá</span></a></li>
-                            <li><a href="#">Giày Boot Nam Đế Cao Màu Vàng PALA GN400 <span class="middle">x 01</span> <span class="last">550.000đ</span></a></li>
-                            <li><a href="#">Giày boot nam màu trơn Không có dây kéo<span class="middle">x 01</span> <span class="last">806.000đ</span></a></li>
-                            <li><a href="#">Nam Giày ống Chelsea Suedette Mặc vào <span class="middle">x 01</span> <span class="last">623.000đ</span></a></li>
+                            <li><a href="#"><%=p.getName()%> <span class="middle">x <%=c.getQuantity()%></span> <span class="last"><%=nf.format(p.getPrice())%>đ</span></a></li>
                         </ul>
+                        <%}%>
                         <ul class="list list_2">
-                            <li><a href="#">Tổng cộng <span>1.979.000đ</span></a></li>
-                            <li><a href="#">Phí Ship <span>20.000đ</span></a></li>
-                            <li><a href="#">Tổng cộng <span>1.999.000đ</span></a></li>
+                            <li><a href="#">Tổng cộng <span><%=nf.format(totalPrice)%>đ</span></a></li>
+                            <li><a href="#">Phí Ship <span>Miễn phí</span></a></li>
+                            <li><a href="#">Tổng cộng <span><%=nf.format(totalPrice)%>đ</span></a></li>
                         </ul>
                         <div class="payment_item ">
                             <div class="radion_btn">
@@ -139,8 +165,7 @@
                                 <label for="f-option5">Trả tiền mặt</label>
                                 <div class="check"></div>
                             </div>
-                            <!--                            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County,-->
-                            <!--                                Store Postcode.</p>-->
+
                         </div>
                         <div class="payment_item active">
                             <div class="radion_btn">
@@ -157,7 +182,7 @@
                             <label for="f-option4">Tôi đã đọc và chấp nhận </label>
                             <a href="#">mọi điều khoản*</a>
                         </div>
-                        <a class="primary-btn" href="#">Xác nhận</a>
+
                     </div>
                 </div>
             </div>
@@ -172,29 +197,6 @@
 </footer>
 <!-- End footer Area -->
 
-<!--Modal-->
-<div class="modal fade" id="cart1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <table class="show-cart table">
-
-                </table>
-                <div>Tổng tiền: <span class="total-cart"></span>.000đ</div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a  href="cart.jsp"><button type="button" class="btn btn-primary" style="background-color: #ffba00">Thanh toán</button></a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!--java script -->
 <script src="js/vendor/jquery-2.2.4.min.js"></script>

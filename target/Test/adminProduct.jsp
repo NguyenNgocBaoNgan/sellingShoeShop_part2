@@ -72,11 +72,8 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-
                                 <th>Tên</th>
-
                                 <th>Giá</th>
-
                                 <th>Số lượng</th>
                                 <th></th>
                             </tr>

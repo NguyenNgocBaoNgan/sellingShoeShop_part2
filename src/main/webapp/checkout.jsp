@@ -74,7 +74,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h3>Chi tiết hóa đơn</h3>
-                    <form class="row contact_form" action="checkout" method="post" novalidate="novalidate" id="checkoutForm">
+                    <form class="row contact_form" action="checkout" method="post">
                         <% User ac = (User) request.getSession().getAttribute("auth");
                             User a1 = LoginService.getAccoutById(String.valueOf(ac.getIdUser()));
 
@@ -129,6 +129,9 @@
 <%--                            </div>--%>
 <%--                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Ghi chú"></textarea>--%>
 <%--                        </div>--%>
+                        <div class="col-md-6" id="form-submit">
+                            <input type='submit' value=' Xác nhận'/>
+                        </div>
                     </form>
                 </div>
                 <div class="col-lg-4">
@@ -179,9 +182,7 @@
                             <label for="f-option4">Tôi đã đọc và chấp nhận </label>
                             <a href="#">mọi điều khoản*</a>
                         </div>
-                        <div id="form-submit">
-                            <input type='submit' value=' Xác nhận'/>
-                        </div>
+
                     </div>
                 </div>
             </div>

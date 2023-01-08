@@ -31,12 +31,12 @@ public class CheckoutCotroller extends HttpServlet {
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
-        String payment = request.getParameter("payment");
-        String idCart = request.getParameter("idCart");
+//        String payment = request.getParameter("payment");
+//        String idCart = request.getParameter("idCart");
         User ac = (User) request.getSession().getAttribute("auth");
         List<Cart> listCart = CartService.getAllByIda(String.valueOf(ac.getIdUser()));
 
-        OrderService.insertOrderByIdAcc(firstName, lastName, email, phone, address, payment, String.valueOf(ac.getIdUser()));
+        OrderService.insertOrderByIdAcc(firstName, lastName, email, phone, address, String.valueOf(ac.getIdUser()));
         List<Order> orderList = OrderService.getAllOrderById(String.valueOf(ac.getIdUser()));
         String idO = String.valueOf(orderList.get(orderList.size()-1).getIdorder());
         for (Cart c : listCart) {

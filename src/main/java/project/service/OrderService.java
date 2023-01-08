@@ -9,17 +9,16 @@ import java.util.stream.Collectors;
 
 public class OrderService {
     public static void insertOrderByIdAcc(String lastName, String firstName, String phone, String email
-            , String address, String payment, String idAcc) {
+            , String address,  String idAcc) {
         JDBiConnector.me().withHandle(h ->
-                h.createUpdate("INSERT INTO orders (firstname, lastname, phone,email,address,payment,idacc, status)" +
-                                "VALUES (?,?,?,?,?,?,?,1)")
+                h.createUpdate("INSERT INTO orders (firstname, lastname, phone,email,address,idacc, status)" +
+                                "VALUES (?,?,?,?,?,?,1)")
                         .bind(0, firstName)
                         .bind(1, lastName)
                         .bind(2, email)
                         .bind(3, phone)
                         .bind(4, address)
-                        .bind(5, payment)
-                        .bind(6, idAcc)
+                        .bind(5, idAcc)
                         .execute()
         );
 
