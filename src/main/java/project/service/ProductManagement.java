@@ -13,12 +13,15 @@ public class ProductManagement {
         });
     }
 
-    public static List<Product> delProduct(String pid){
-        String query="delete from product where idPro=?";
-        return JDBiConnector.me().withHandle(handle->{
-            return handle.createQuery(query).execute((statementSupplier, ctx) -> (List<Product>) getAllProduct());
+    public static void delProduct(String idPro){
+        JDBiConnector.me().withHandle(h ->
+                h.createUpdate("delete   from product where idPro= ?")
+                        .bind(0, idPro)
+                        .execute()
+        );
+    }
 
-
-        });
+    public static void main(String[] args) {
+        delProduct("0");
     }
 }

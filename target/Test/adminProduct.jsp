@@ -89,8 +89,8 @@
                         <td><%= p.getQuantity() %></td>
 
                         <td>
-                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                            <button href="DeleteControl?pid=${p.getIdPro()}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                            <a class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+                            <a href="DeleteControl?pid=${p.getIdPro()}" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></a>
                         </td>
 
                     </tr>

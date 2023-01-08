@@ -103,7 +103,7 @@
   <footer class="site-footer">
     <div class="text-center">
 
-      <a href="adminProduct.jsp" class="go-top">
+      <a href="adminCategory.jsp" class="go-top">
         <i class="fa fa-angle-up"></i>
       </a>
     </div>

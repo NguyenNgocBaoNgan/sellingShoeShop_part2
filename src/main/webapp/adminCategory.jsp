@@ -88,10 +88,10 @@
             <td><%= catI.getIdCat() %></td>
           </tr>
           <% } %>
-              </tbody>
-            </table>
-          </div><! --/content-panel -->
-        </div><!-- /col-md-12 -->
+          </tbody>
+          </table>
+        </div><! --/content-panel -->
+      </div><!-- /col-md-12 -->
 
       </div>
     </section>

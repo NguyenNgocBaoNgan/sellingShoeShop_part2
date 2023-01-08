@@ -11,12 +11,9 @@ import java.io.IOException;
 public class DeleteController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String pid= request.getParameter("pid");
-        ProductManagement pm = new ProductManagement();
-        pm.delProduct(pid);
+        String idPro= request.getParameter("idPro");
+        ProductManagement.delProduct(idPro);
         response.sendRedirect("adminProduct");
-
-
     }
 
     @Override
