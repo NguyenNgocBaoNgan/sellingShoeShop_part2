@@ -17,7 +17,6 @@ public class AdminProduct extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Product pr=(Product) request.getSession().getAttribute("auth");
 
         List<Product> listProduct= ProductManagement.getAllProduct();
         request.setAttribute("listProduct", listProduct);
