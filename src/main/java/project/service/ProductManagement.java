@@ -12,4 +12,13 @@ public class ProductManagement {
             return handle.createQuery("select * from product").mapToBean(Product.class).stream().collect(Collectors.toList());
         });
     }
+
+    public static List<Product> delProduct(String pid){
+        String query="delete from product where idPro=?";
+        return JDBiConnector.me().withHandle(handle->{
+            return handle.createQuery(query).execute((statementSupplier, ctx) -> (List<Product>) getAllProduct());
+
+
+        });
+    }
 }
