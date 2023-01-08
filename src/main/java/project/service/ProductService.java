@@ -61,7 +61,7 @@ public class ProductService {
     //    lấy danh sách sản phẩm theo cat
     public static List<Product> getListCById(String cid) {
         return JDBiConnector.me().withHandle(handle -> {
-            return handle.createQuery("select p.id,p.img,p.name, p.price, p.detailPro from product p join categoryitem c on p.idCatItem =c.id  where c.id = ?")
+            return handle.createQuery("select p.idPro,p.img,p.name, p.price, p.detailPro from product p join categoryitem c on p.idCatItem =c.id  where c.id = ?")
                     .bind(0, cid)
                     .mapToBean(Product.class)
                     .stream().collect(Collectors.toList());
@@ -153,7 +153,7 @@ public class ProductService {
     }
 
     // hiện thị thêm 8 sp thi chọn sem thêm
-    public static List<Product> getNextTop12Product(int amount) {
+    public static List<Product> getNextTop8Product(int amount) {
         return JDBiConnector.me().withHandle(handle -> {
             return handle.createQuery("SELECT * FROM product LIMIT ?,8")
                     .bind(0, amount)
@@ -187,9 +187,16 @@ public class ProductService {
                         .execute()
         );
     }
-
+    public static List<Product> getList() {
+        return JDBiConnector.me().withHandle(handle -> {
+            return handle.createQuery("select idPro from product p ")
+                    .mapToBean(Product.class)
+                    .stream().collect(Collectors.toList());
+        });
+    }
 
     public static void main(String[] args) {
+        System.out.println(getListCById("1"));
     }
 
 }
