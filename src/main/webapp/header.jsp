@@ -77,7 +77,7 @@
                         </a></li>
                     <% } else {%>
                     <li class="nav-item" style="margin-top: 28px">
-                        <a href="admin-overview" class="cart">
+                        <a href="adminHome" class="cart">
                             <%=ac.getUserName()%>
                         </a></li>
                     <% }}%>

@@ -196,15 +196,16 @@
 
                         <div class="single-product">
                             <img class="img-fluid resize" src="<%=p.getImg()%>" alt="">
-                            <div class="product-details">
-                                <a href="detail?id=<%=p.getId()%>"><h6><%=p.getName()%></h6></a>
+                            <div class="product-details"><div><%= p.getIdPro()%></div>
+                                <a href="detail?id=<%=p.getIdPro()%>"><h6><%=p.getName()%></h6></a>
                                 <div class="price">
                                     <h6><%=nf.format(p.getPrice())%>đ</h6>
                                     <!--										<h6 class="l-through">210.000đ</h6>-->
                                 </div>
                                 <div class="prd-bottom">
 
-                                    <a href="cart?command=insertItem&product_id=<%=p.getId ()%>" class="social-info">
+
+                                    <a href="cart?command=insertItem&product_id=<%=p.getIdPro ()%>" class="social-info">
                                         <span class="ti-bag"></span>
                                         <p class="hover-text">Thêm vào giỏ</p>
                                     </a>
@@ -255,7 +256,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                         <div class="single-related-product d-flex">
-                            <a href="#"><img src="../../img/product/Nu/Boots/chelsea boots.png" alt="" class="resize-img"></a>
+                            <a href="#"><img src="img/product/Nu/Boots/chelsea boots.png" alt="" class="resize-img"></a>
                             <div class="desc">
                                 <a href="#" class="title">Chelsea boots(Đen)</a>
                                 <div class="price">
@@ -267,7 +268,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                         <div class="single-related-product d-flex">
-                            <a href="#"><img src="../../img/product/Nu/Boots/cgct.png" alt="" class="resize-img"></a>
+                            <a href="#"><img src="img/product/Nu/Boots/cgct.png" alt="" class="resize-img"></a>
                             <div class="desc">
                                 <a href="#" class="title">Boots nữ co giãn cổ thấp</a>
                                 <div class="price">
@@ -279,7 +280,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                         <div class="single-related-product d-flex">
-                            <a href="#"><img src="../../img/product/Nu/Boots/cndbmn.png" alt="" class="resize-img"></a>
+                            <a href="#"><img src="img/product/Nu/Boots/cndbmn.png" alt="" class="resize-img"></a>
                             <div class="desc">
                                 <a href="#" class="title">Boots nữ cổ ngắn da bóng mũi nhọn</a>
                                 <div class="price">
@@ -291,7 +292,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                         <div class="single-related-product d-flex">
-                            <a href="#"><img src="../../img/product/Nu/Boots/cngn.png" alt="" class="resize-img"></a>
+                            <a href="#"><img src="img/product/Nu/Boots/cngn.png" alt="" class="resize-img"></a>
                             <div class="desc">
                                 <a href="#" class="title">Boots nữ cổ ngắn gót nhỏ(Đen)</a>
                                 <div class="price">
@@ -303,7 +304,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                         <div class="single-related-product d-flex">
-                            <a href="#"><img src="../../img/product/Nu/SportShoes/sp10.png" alt="" class="resize-img"></a>
+                            <a href="#"><img src="img/product/Nu/SportShoes/sp10.png" alt="" class="resize-img"></a>
                             <div class="desc">
                                 <a href="#" class="title">Adidas superstar shoes</a>
                                 <div class="price">
@@ -315,7 +316,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                         <div class="single-related-product d-flex">
-                            <a href="#"><img src="../../img/product/Nu/RunningShoes/rs3.png" alt="" class="resize-img"></a>
+                            <a href="#"><img src="img/product/Nu/RunningShoes/rs3.png" alt="" class="resize-img"></a>
                             <div class="desc">
                                 <a href="#" class="title">Giày Chạy Bộ Nữ Biti's Hunter Running Black
                                     DSWH08300DEN (Đen)</a>
@@ -328,7 +329,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="single-related-product d-flex">
-                            <a href="#"><img src="../../img/product/Nu/RunningShoes/rs4.png" alt="" class="resize-img"></a>
+                            <a href="#"><img src="img/product/Nu/RunningShoes/rs4.png" alt="" class="resize-img"></a>
                             <div class="desc">
                                 <a href="#" class="title">Giày Chạy Bộ Nữ Biti's Hunter Running Electric
                                     Blue DSWH03900XDG (Xanh Dương)</a>
@@ -341,7 +342,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="single-related-product d-flex">
-                            <a href="#"><img src="../../img/product/Nu/RunningShoes/rs5.png" alt="" class="resize-img"></a>
+                            <a href="#"><img src="img/product/Nu/RunningShoes/rs5.png" alt="" class="resize-img"></a>
                             <div class="desc">
                                 <a href="#" class="title">Giày Chạy Bộ Nữ Biti's Hunter Running Neon Green
                                     DSWH03900XMN (Xanh Mi Nơ)</a>
@@ -354,7 +355,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="single-related-product d-flex">
-                            <a href="#"><img src="../../img/product/Nu/RunningShoes/rs6.png" alt="" class="resize-img"></a>
+                            <a href="#"><img src="img/product/Nu/RunningShoes/rs6.png" alt="" class="resize-img"></a>
                             <div class="desc">
                                 <a href="#" class="title">Giày Chạy Bộ Nữ Biti's Hunter Running White
                                     DSWH08300TRG (Trắng)</a>
@@ -370,7 +371,7 @@
             <div class="col-lg-3">
                 <div class="ctg-right">
                     <a href="#" target="_blank">
-                        <img class="img-fluid d-block mx-auto" src="../../img/categories/c5.jpg" alt="">
+                        <img class="img-fluid d-block mx-auto" src="img/categories/c5.jpg" alt="">
                     </a>
                 </div>
             </div>

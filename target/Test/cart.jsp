@@ -95,10 +95,10 @@
                         <td class="cart_product_img cart_product_desc" >
                             <div class="media">
                                 <div class="d-flex">
-                                    <a href="detail?id=<%=p.getId()%>"><img src="<%=p.getImg()%>" alt="Product"></a>
+                                    <a href="detail?id=<%=p.getIdPro()%>"><img src="<%=p.getImg()%>" alt="Product"></a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="detail?id=<%=p.getId()%>"><%=p.getName()%>
+                                    <a href="detail?id=<%=p.getIdPro()%>"><%=p.getName()%>
                                 </div>
                             </div>
                         </td>
