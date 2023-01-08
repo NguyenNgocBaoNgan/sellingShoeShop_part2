@@ -14,13 +14,16 @@
 	<div class="form-container sign-up-container">
 		<form action="signup">
 			<h1>Đăng kí</h1>
-			<input name="user" type="text" placeholder="Tên " />
-			<input name="pass" type="password" placeholder="Mật khẩu" />
-			<input name="repass" type="password" placeholder="Nhập lại mật khẩu" />
+			<input name="userName" type="text" placeholder="Tên đăng nhập" />
+			<input name="fullName" type="text" placeholder="Họ và tên" />
+			<input name="email" type="email" placeholder="email" />
+			<input name="DOB" type="date" placeholder="Ngày sinh" />
+			<input name="password" type="password" placeholder="Mật khẩu" />
+			<input name="repassword" type="password" placeholder="Nhập lại mật khẩu" />
 
 			<button type="submit" >Đăng kí</button>
 			<span>Hoặc đăng kí bằng</span>
-			<div class="social-container">
+			<div class="social-container" >
 				<a href="#" class="social"><i class="ti-google"></i></a>
 				<a href="#" class="social"><i class="ti-facebook"></i></a>
 			</div>
@@ -58,7 +61,7 @@
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left" >
-				<h1>Chào mừng bạn đến DST</h1>
+				<h1>Chào mừng bạn đến Karma shop</h1>
 				<p>Đăng nhập nhanh để nhận ưu đãi nào!</p>
 				<button class="ghost" id="signIn">Đăng nhập</button>
 			</div>
