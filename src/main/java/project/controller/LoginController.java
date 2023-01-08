@@ -2,6 +2,7 @@ package project.controller;
 
 import project.model.User;
 import project.service.LoginService;
+import project.tool.Encode;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +18,7 @@ public class LoginController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        User u = LoginService.getAccout(email, password );
+        User u = LoginService.getAccout(email, Encode.enCodeMD5(password) );
 
         if(u == null){
             request.setAttribute("mess", "Sai user hoặc mật khẩu!");
