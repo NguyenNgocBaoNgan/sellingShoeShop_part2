@@ -209,7 +209,7 @@
                         <td>
                             <div class="checkout_btn_inner d-flex align-items-center">
                                 <a class="gray_btn" href="index.jsp"><h5 style="padding-top: 10px">Tiếp tục mua sắm</h5></a>
-                                <a class="primary-btn" href="checkout.jsp">Đến trang thanh toán</a>
+                                <a class="primary-btn" href="checkout">Đến trang thanh toán</a>
                             </div>
                         </td>
                     </tr>

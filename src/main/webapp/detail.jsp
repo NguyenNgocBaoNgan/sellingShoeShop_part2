@@ -61,7 +61,7 @@
                 <h1>Chi tiết sản phẩm</h1>
                 <nav class="d-flex align-items-center">
                     <a href="index.jsp">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="detail.jsp">chi tiết sản phẩm</a>
+                    <a href="detail.jsp">Chi tiết sản phẩm</a>
                 </nav>
             </div>
         </div>

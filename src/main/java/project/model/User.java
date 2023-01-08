@@ -11,12 +11,17 @@ public class User implements Serializable {
     String password;
     int role;
     private int managerAccount, managerProduct, managerHome, managerBlog, assistant,managerOrder;
+    String phone;
+    String address;
 
     public User(){
 
     }
 
-    public User(int idUser, String userName, String fullName, String email, String DOB, String password, int role, int managerAccount, int managerProduct, int managerHome, int managerBlog, int assistant, int managerOrder) {
+
+
+    public User(int idUser, String userName, String fullName, String email, String DOB, String password, int role, int managerAccount, int managerProduct,
+                int managerHome, int managerBlog, int assistant, int managerOrder, String phone, String address) {
         this.idUser = idUser;
         this.userName = userName;
         this.fullName = fullName;
@@ -30,6 +35,8 @@ public class User implements Serializable {
         this.managerBlog = managerBlog;
         this.assistant = assistant;
         this.managerOrder = managerOrder;
+        this.phone = phone;
+        this.address = address;
     }
 //    public User(int idUser, String userName, String fullName, String email, String DOB, String password, int role) {
 //        this.idUser = idUser;
@@ -144,6 +151,21 @@ public class User implements Serializable {
     public void setManagerOrder(int managerOrder) {
         this.managerOrder = managerOrder;
     }
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     @Override
     public String toString() {
@@ -164,15 +186,5 @@ public class User implements Serializable {
                 '}';
     }
 
-    //    public String toString() {
-//        return "User{" +
-//                "idUser=" + idUser +
-//                ", userName='" + userName + '\'' +
-//                ", fullName='" + fullName + '\'' +
-//                ", email='" + email + '\'' +
-//                ", DOB='" + DOB + '\'' +
-//                ", password='" + password + '\'' +
-//                ", role=" + role +
-//                '}';
-//    }
+
 }
