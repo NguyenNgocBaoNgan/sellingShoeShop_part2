@@ -196,7 +196,7 @@
 
                         <div class="single-product">
                             <img class="img-fluid resize" src="<%=p.getImg()%>" alt="">
-                            <div class="product-details"><div><%= p.getIdPro()%></div>
+                            <div class="product-details">
                                 <a href="detail?id=<%=p.getIdPro()%>"><h6><%=p.getName()%></h6></a>
                                 <div class="price">
                                     <h6><%=nf.format(p.getPrice())%>đ</h6>

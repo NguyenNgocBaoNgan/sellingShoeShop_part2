@@ -142,7 +142,7 @@
                             </a>
                         </td>
                     </tr>
-
+                    <%}%>
                     <%--                    <tr class="bottom_button">--%>
                     <%--                        <td>--%>
                     <%--                            <a class="gray_btn" href="#">Cập nhật giỏ hàng</a>--%>
@@ -213,7 +213,7 @@
                             </div>
                         </td>
                     </tr>
-                    <%}%>
+
                     </tbody>
                 </table>
             </div>
