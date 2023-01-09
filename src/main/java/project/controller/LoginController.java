@@ -18,25 +18,18 @@ public class LoginController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        User u = LoginService.getAccout(email, Encode.enCodeMD5(password));
+        User u = LoginService.getAccout(email, Encode.enCodeMD5(password) );
 
-        if (u == null) {
+        if(u == null){
             request.setAttribute("mess", "Sai user hoặc mật khẩu!");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
-        } else {
-            if (u.getBlockUser().equals("có")) {
-                request.setAttribute("mess", "Tài khoản đang bị khóa");
-                request.getRequestDispatcher("login.jsp").forward(request, response);
-            } else {
-                HttpSession session = request.getSession();
-                session.setAttribute("auth", u);
-                response.sendRedirect("home");
-            }
+            request.getRequestDispatcher("login.jsp").forward(request,response);
         }
+        else {
+            HttpSession session = request.getSession();
+            session.setAttribute("auth", u);
+            response.sendRedirect("home");
 
-        HttpSession session = request.getSession();
-        session.setAttribute("auth", u);
-        response.sendRedirect("home");
+        }
 
     }
 
