@@ -147,7 +147,7 @@
 									<div class="col-sm-6 col-xs-6"></div>
 								</div>
 								<div class="centered">
-									<img src="../../demo/ imgAd/product/Nu/RunningShoes/rs1.png" width="120">
+									<img src="imgAd/product/Nu/RunningShoes/rs1.png" width="120">
 								</div>
 							</div>
 						</div><!-- /col-md-4 -->

@@ -70,18 +70,18 @@ public class OrderService {
         });
     }
     // lấy tất cả các ttangj thái
-    public static void editStatus(String ido, String status) {
+    public static void editStatus(String status,String idorder) {
         JDBiConnector.me().withHandle(h ->
                 h.createUpdate("update orders set status= ? where idorder =?")
                         .bind(0, status)
-                        .bind(1, ido)
+                        .bind(1, idorder)
                         .execute()
         );
     }
 
 
     public static void main(String[] args) {
-
+        editStatus("2","0");
 
 
     }

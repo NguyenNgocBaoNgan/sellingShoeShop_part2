@@ -79,6 +79,13 @@
                 </a>
             </li>
 
+            <li class="sub-menu">
+                <a href="admin-buy-order">
+                    <i class=" fa fa-bar-chart-o"></i>
+                    <span>Đơn hàng</span>
+                </a>
+            </li>
+
 
         </ul>
 
