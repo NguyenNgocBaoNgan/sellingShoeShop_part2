@@ -24,19 +24,11 @@ public class LoginController extends HttpServlet {
             request.setAttribute("mess", "Sai user hoặc mật khẩu!");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         } else {
-            if (u.getBlockUser().equals("có")) {
-                request.setAttribute("mess", "Tài khoản đang bị khóa");
-                request.getRequestDispatcher("login.jsp").forward(request, response);
-            } else {
-                HttpSession session = request.getSession();
-                session.setAttribute("auth", u);
-                response.sendRedirect("home");
-            }
-        }
+            HttpSession session = request.getSession();
+            session.setAttribute("auth", u);
+            response.sendRedirect("home");
 
-        HttpSession session = request.getSession();
-        session.setAttribute("auth", u);
-        response.sendRedirect("home");
+        }
 
     }
 

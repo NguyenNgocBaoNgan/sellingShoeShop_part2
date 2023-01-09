@@ -12,7 +12,7 @@ public class UnblockUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String idUser = request.getParameter("idUser");
-        AccountManagement.isblockUser("",idUser);
+        AccountManagement.isblockUser(" ",idUser);
         response.sendRedirect("adminUser");
     }
 

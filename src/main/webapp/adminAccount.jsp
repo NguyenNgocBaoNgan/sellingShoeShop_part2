@@ -99,7 +99,6 @@
 
 
                                 <td>
-                                    <div><%= u.getBlockUser() %></div>
                                     <a href="BlockUser?idUser=<%=u.getIdUser()%>" class="btn btn-danger btn-xs" type="submit"><i class="fa fa-lock "></i> </a>
                                     <a href="UnblockUser?idUser=<%=u.getIdUser()%>" class="btn btn-clear-g btn-xs" type="submit"><i class="fa fa-lock "></i> </a>
 
