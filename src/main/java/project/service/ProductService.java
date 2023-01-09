@@ -138,20 +138,19 @@ public class ProductService {
         });
     }
 
-    public static void editProductById(String idProduct, String name,
-                                       String price, String introduce, String inventory) {
+    public static void editProductById(String name, String price,
+                                       String detailPro, String quantity, String idPro) {
         JDBiConnector.me().withHandle(h ->
                 h.createUpdate("update product set name =?," +
-                                "price = ?,detailPro =?, quantity =?  where id = ?")
+                                "price = ?,detailPro =?, quantity =?  where idPro = ?")
                         .bind(0, name)
                         .bind(1, price)
-                        .bind(2, introduce)
-                        .bind(3, inventory)
-                        .bind(4, idProduct)
+                        .bind(2, detailPro)
+                        .bind(3, quantity)
+                        .bind(4, idPro)
                         .execute()
         );
     }
-
     // hiện thị thêm 8 sp thi chọn sem thêm
     public static List<Product> getNextTop8Product(int amount) {
         return JDBiConnector.me().withHandle(handle -> {
