@@ -62,7 +62,7 @@ public class LoginService {
     public static void main(String[] args) {
 //        signUpA("truc", "1");
 
-//        System.out.println(getAccout("chi@gmail.com","3333"));
+        System.out.println(getAccout("nhi@gmail.com","123"));
     }
 
 

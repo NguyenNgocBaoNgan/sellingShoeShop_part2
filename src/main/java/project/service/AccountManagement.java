@@ -53,7 +53,14 @@ public class AccountManagement {
                     .bind(0, userName).bind(1, fullName).bind(2, email).bind(3, DOB).bind(4, id).execute();
         });
     }
+    public static void isblockUser(String isblock,String id) {
+        JDBiConnector.me().withHandle(handle -> {
+            return handle.createUpdate("update user set blockUser = ? where idUser = ?")
+                    .bind(0, isblock).bind(1, id).execute();
+        });
+    }
     public static void main(String[] args) {
+
     }
 
 }

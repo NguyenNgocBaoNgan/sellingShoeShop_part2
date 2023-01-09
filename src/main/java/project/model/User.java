@@ -13,15 +13,13 @@ public class User implements Serializable {
     private int managerAccount, managerProduct, managerHome, managerBlog, assistant,managerOrder;
     String phone;
     String address;
+    String blockUser;
 
     public User(){
 
     }
 
-
-
-    public User(int idUser, String userName, String fullName, String email, String DOB, String password, int role, int managerAccount, int managerProduct,
-                int managerHome, int managerBlog, int assistant, int managerOrder, String phone, String address) {
+    public User(int idUser, String userName, String fullName, String email, String DOB, String password, int role, int managerAccount, int managerProduct, int managerHome, int managerBlog, int assistant, int managerOrder, String phone, String address, String blockUser) {
         this.idUser = idUser;
         this.userName = userName;
         this.fullName = fullName;
@@ -37,16 +35,8 @@ public class User implements Serializable {
         this.managerOrder = managerOrder;
         this.phone = phone;
         this.address = address;
+        this.blockUser = blockUser;
     }
-//    public User(int idUser, String userName, String fullName, String email, String DOB, String password, int role) {
-//        this.idUser = idUser;
-//        this.userName = userName;
-//        this.fullName = fullName;
-//        this.email = email;
-//        this.DOB = DOB;
-//        this.password = password;
-//        this.role = role;
-//    }
 
     public int getIdUser() {
         return idUser;
@@ -151,6 +141,7 @@ public class User implements Serializable {
     public void setManagerOrder(int managerOrder) {
         this.managerOrder = managerOrder;
     }
+
     public String getPhone() {
         return phone;
     }
@@ -165,6 +156,14 @@ public class User implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getBlockUser() {
+        return blockUser;
+    }
+
+    public void setBlockUser(String blockUser) {
+        this.blockUser = blockUser;
     }
 
     @Override
@@ -183,8 +182,9 @@ public class User implements Serializable {
                 ", managerBlog=" + managerBlog +
                 ", assistant=" + assistant +
                 ", managerOrder=" + managerOrder +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", blockUser=" + blockUser +
                 '}';
     }
-
-
 }
