@@ -78,8 +78,6 @@
                                 <th>Họ tên</th>
                                 <th>Email</th>
                                 <th>Ngày sinh</th>
-                                <th>Đang bị khóa</th>
-
                             </tr>
                             </thead>
                             <tbody>
@@ -95,14 +93,11 @@
                                 <td><%= u.getFullName() %></td>
                                 <td><%= u.getEmail() %></td>
                                 <td><%= u.getDOB() %></td>
-                                <td><%= u.getBlockUser() %></td>
-
 
                                 <td>
-                                    <div><%= u.getBlockUser() %></div>
-                                    <a href="BlockUser?idUser=<%=u.getIdUser()%>" class="btn btn-danger btn-xs" type="submit"><i class="fa fa-lock "></i> </a>
-                                    <a href="UnblockUser?idUser=<%=u.getIdUser()%>" class="btn btn-clear-g btn-xs" type="submit"><i class="fa fa-lock "></i> </a>
-
+                                    <button class="btn btn-danger btn-xs"><i class="fa fa-lock"></i></button>
+<%--                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>--%>
+<%--                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>--%>
                                 </td>
 
                             </tr>

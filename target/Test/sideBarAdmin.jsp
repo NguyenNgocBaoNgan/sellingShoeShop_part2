@@ -29,24 +29,24 @@
                     <span>Trang chủ</span>
                 </a>
             </li>
-<%--            <li class="sub-menu">--%>
-<%--                <a href="javascript:;">--%>
-<%--                    <i class="fa fa-cogs"></i>--%>
-<%--                    <span>Các thành phần</span>--%>
-<%--                </a>--%>
-<%--                <ul class="sub">--%>
-<%--                    <li><a href="adminCalendar.jsp">Lịch</a></li>--%>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-cogs"></i>
+                    <span>Các thành phần</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="adminCalendar.jsp">Lịch</a></li>
 
-<%--                    <li><a href="adminTodo_list.jsp">Todo List</a></li>--%>
-<%--                </ul>--%>
-<%--            </li>--%>
-<%--            <li class="sub-menu">--%>
-<%--                <a href="adminBasic_table.jsp">--%>
-<%--                    <i class="fa fa-th"></i>--%>
-<%--                    <span>Bảng dữ liệu</span>--%>
-<%--                </a>--%>
+                    <li><a href="adminTodo_list.jsp">Todo List</a></li>
+                </ul>
 
-<%--            </li>--%>
+            <li class="sub-menu">
+                <a href="adminBasic_table.jsp">
+                    <i class="fa fa-th"></i>
+                    <span>Bảng dữ liệu</span>
+                </a>
+
+            </li>
             <li class="sub-menu">
                 <a href="adminChartjs.jsp">
                     <i class=" fa fa-bar-chart-o"></i>
