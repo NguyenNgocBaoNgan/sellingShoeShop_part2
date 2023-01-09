@@ -128,7 +128,7 @@
                 </span></td>
                 <td>
                   <a href="adminAccept?idorder=<%=order.getIdorder()%>&status=<%=order.getStatus()%>" class="btn btn-success btn-xs"><i class="fa fa-check"></i></a>
-                  <a href="adminAccept?idorder=<%=order.getIdorder()%>&status=<%=order.getStatus()%>" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+                  <a href="adminViewOrder?idorder=<%=order.getIdorder()%>" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
                   <a href="adminAccept?idorder=<%=order.getIdorder()%>&status=<%=order.getStatus()%>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></a>
 
 <%--                  <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>--%>

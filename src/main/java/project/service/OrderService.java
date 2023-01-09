@@ -2,6 +2,7 @@ package project.service;
 
 import project.db.JDBiConnector;
 import project.model.Order;
+import project.model.User;
 //import project.model.Payment;
 
 import java.util.List;
@@ -25,7 +26,7 @@ public class OrderService {
     }
     public static List<Order> getListOrderByIdAcc(String idAcc) {
         return JDBiConnector.me().withHandle(handle -> {
-            return handle.createQuery("select * from orders  where idAcc = ?")
+            return handle.createQuery("select * from orders  where idacc = ?")
                     .bind(0,idAcc)
                     .mapToBean(Order.class)
                     .stream().collect(Collectors.toList());
@@ -78,10 +79,22 @@ public class OrderService {
                         .execute()
         );
     }
+    public static Order viewUserOrder(String idorder){
+        List<Order> orders = JDBiConnector.me().withHandle(h ->
+                h.createQuery("SELECT * FROM orders WHERE idorder = ? ")
+                        .bind(0, idorder)
+                        .mapToBean(Order.class)
+                        .stream()
+                        .collect(Collectors.toList())
+        );
+        if (orders.size() == 0) return null;
+        return orders.get(0);
+    }
 
 
     public static void main(String[] args) {
-        editStatus("2","0");
+       //editStatus("2","0");
+        System.out.println(viewUserOrder("0"));
 
 
     }
